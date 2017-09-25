@@ -4,4 +4,4 @@ Instal·lació de Percona
 </p>
 
 <p> Per iniciar, parar o reiniciar el servei farem servir la següent comanda </p>
-<p> _service mysql start | stop | restart_ </p>
+_service mysql start | stop | restart_
