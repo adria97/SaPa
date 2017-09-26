@@ -6,20 +6,20 @@
 
 ![alt text](img/Screenshot_1.png)
 
-2. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server.
+1. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server.
 </br>
-***service mysql start | stop | restart***
+<b><i>service mysql start | stop | restart</i></b>
 
-## Pregunta 3
-Els fitxer de configuració es troben en ***/etc/my.cnf***
+2. A on es troba i quin nom rep el fitxer de configuració del SGBD Percona Server?
+Els fitxer de configuració es troben en <b><i>/etc/my.cnf</i></b>
 
-## Pregunta 4
-Els fitxers es guarden fisicament en ***/var/lib/mysql***
+3. A on es troben físicament els fitxers de dades (per defecte)
+Els fitxers es guarden fisicament en <b><i>/var/lib/mysql</i></b>
 
-## Pregunta 5
-
-
-## Pregunta 6
+4. Crea un usuari anomenat asix en el sistema operatiu i en SGBD de tal manera que aquest usuari del sistema operatiu no hagi d'introduir l'usuari i password cada vegada que cridem al client mysql?
 
 
-## Pregunta 7
+5. Pregunta 6
+
+
+6. Pregunta 7
