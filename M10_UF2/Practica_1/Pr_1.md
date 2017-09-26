@@ -9,9 +9,7 @@ Primer descarreguem el paquet de Percona des de la seva URL <b>http://www.percon
 Una vegada descarregat el RPM podem revisar si tenim els repositoris <b><i>yum list | grep percona</i></b> i poder seleccionar la nostra verció a instal·lar. </br>
 Per instal·lar el Percona utilitzem la següent comanda <b><i>yum install Percona-Server-server-56</i></b>, el nom varia depenent de la versió. </br>
 ![alt text](img/Screenshot_4.png) </br>
-4 </br>
-![alt text](img/Screenshot_5.png) </br>
-6 </br>
+Esperem a que descargui lo necessari per a la instal·lació. </br>
 ![alt text](img/Screenshot_6.png) </br>
 
 1. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server. </br>
