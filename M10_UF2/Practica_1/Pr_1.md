@@ -2,12 +2,12 @@
 
 1. Indica clarament els passos per reprodurïr la instal·lació en un altra màquina.
 
-- Instal·lació de Percona </br>
+- Instal·lació de Percona. </br>
 
-Primer descarreguem el paquet de Percona des de la seva URL <b>http://www.percona.com/downloads/percona-release/redhat/0.1-4/percona-release-0.1-4.noarch.rpm</b>
+Primer descarreguem el paquet de Percona des de la seva URL <b>http://www.percona.com/downloads/percona-release/redhat/0.1-4/percona-release-0.1-4.noarch.rpm</b>.
 ![install Percona in CentOS 7](img/Screenshot_1.png) </br>
-Una vegada descarregat el RPM podem revisar si tenim els repositoris <b><i>yum list | grep percona</i></b> i poder seleccionar la nostra verció a instal·lar </br>
-  <b><i>yum install Percona-Server-server-56</i></b> </br>
+Una vegada descarregat el RPM podem revisar si tenim els repositoris <b><i>yum list | grep percona</i></b> i poder seleccionar la nostra verció a instal·lar. </br>
+Per instal·lar el Percona utilitzem la següent comanda <b><i>yum install Percona-Server-server-56</i></b>, el nom varia depenent de la versió. </br>
 ![alt text](img/Screenshot_4.png) </br>
 4 </br>
 ![alt text](img/Screenshot_5.png) </br>
