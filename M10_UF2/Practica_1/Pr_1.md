@@ -3,6 +3,8 @@
 ## Pregunta 3
 Instal·lació de Percona
 
+![GitHub Logo](/SaPa/M10_UF2/Screenshot_1.png)
+
 ## Pregunta 2
 Per iniciar, parar o reiniciar el servei farem servir la següent comanda
 </br>
