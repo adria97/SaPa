@@ -1,12 +1,12 @@
 # Pràctica 1
 
-## Pregunta 3
-Instal·lació de Percona
+1. Indica clarament els passos per reprodurïr la instal·lació en un altra màquina.
+
+- Instal·lació de Percona
 
 ![alt text](img/Screenshot_1.png)
 
-## Pregunta 2
-Per iniciar, parar o reiniciar el servei farem servir la següent comanda
+2. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server.
 </br>
 ***service mysql start | stop | restart***
 
