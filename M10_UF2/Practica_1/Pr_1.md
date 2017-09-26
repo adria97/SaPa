@@ -20,5 +20,5 @@ Els fitxers es guarden fisicament en <b><i>/var/lib/mysql</i></b>
 
 5. El servei de MySQL (mysqld) escolta al port 3306. Quina modificació/passos caldrien fer per canviar aquest port a 33306 per exemple? Important: No realitzis els canvis. Només indica els passos que faries. </br>
 Primer tindriem que configurar el arxiu <b><i>my.cnf</i></b> i afeguir les següents linies en el fitxer. </br>
-IMG </br>
+![alt text](img/Screenshot_7.png) </br>
 Guardem i reiniciem el servei <b><i>service mysql restart</i></b>
