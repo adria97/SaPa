@@ -5,6 +5,14 @@
 - Instal·lació de Percona
 
 ![alt text](img/Screenshot_1.png)
+2
+![alt text](img/Screenshot_2.png)
+3
+![alt text](img/Screenshot_4.png)
+4
+![alt text](img/Screenshot_5.png)
+6
+![alt text](img/Screenshot_6.png)
 
 1. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server. </br>
 <b><i>service mysql start | stop | restart | status</i></b>
