@@ -2,17 +2,17 @@
 
 1. Indica clarament els passos per reprodurïr la instal·lació en un altra màquina.
 
-- Instal·lació de Percona
+- Instal·lació de Percona </br>
 
-![alt text](img/Screenshot_1.png)
-2
-![alt text](img/Screenshot_2.png)
-3
-![alt text](img/Screenshot_4.png)
-4
-![alt text](img/Screenshot_5.png)
-6
-![alt text](img/Screenshot_6.png)
+Primer descarreguem el paquet de Percona des de la seva URL
+![install Percona in CentOS 7](img/Screenshot_1.png) </br>
+2 </br>
+3 </br>
+![alt text](img/Screenshot_4.png) </br>
+4 </br>
+![alt text](img/Screenshot_5.png) </br>
+6 </br>
+![alt text](img/Screenshot_6.png) </br>
 
 1. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server. </br>
 <b><i>service mysql start | stop | restart | status</i></b>
