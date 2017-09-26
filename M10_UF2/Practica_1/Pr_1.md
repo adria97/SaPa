@@ -3,7 +3,7 @@
 ## Pregunta 3
 Instal·lació de Percona
 
-<img href="../../Screenshot_1.png" />
+<img href="img/Screenshot_1.png" />
 
 ## Pregunta 2
 Per iniciar, parar o reiniciar el servei farem servir la següent comanda
