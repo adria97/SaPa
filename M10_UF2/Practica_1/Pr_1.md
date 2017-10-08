@@ -1,5 +1,7 @@
 # Pràctica 1
 
+## Part - 1 Percona Server
+
 1. Indica clarament els passos per reprodurïr la instal·lació en un altra màquina.
 
 - Instal·lació de Percona. </br>
@@ -30,3 +32,6 @@ Els fitxers es guarden fisicament en <b><i>/var/lib/mysql</i></b>
 Primer tindriem que configurar el arxiu <b><i>my.cnf</i></b> i afeguir les següents linies en el fitxer. </br>
 ![alt text](img/Screenshot_7.png) </br>
 Guardem i reiniciem el servei <b><i>service mysql restart</i></b>
+
+## Part - 2 MongoDB
+
