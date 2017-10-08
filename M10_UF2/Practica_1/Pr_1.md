@@ -39,6 +39,5 @@ Guardem i reiniciem el servei <b><i>service mysql restart</i></b>
 
 1. Instal·lació.
 
-2. Connexió a MongoDB.
-
+2. Connexió a MongoDB. </br></br>
 Per poder-nos connectar a la base de dades de MongoDB tenim que introduïr lo següent: <b><i>/bin/mongo</i></b>
