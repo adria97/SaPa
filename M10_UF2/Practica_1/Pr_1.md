@@ -12,7 +12,7 @@ Per instal·lar el Percona utilitzem la següent comanda <b><i>yum install Perco
 Esperem a que descargui lo necessari per a la instal·lació i ja estariem de la instal·lació, nomes faltaria comprovar si el servei esta en execució. </br>
 ![alt text](img/Screenshot_6.png) </br>
 
-- securització:
+- Securització:
 
 2. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server. </br>
 <b><i>service mysql start | stop | restart | status</i></b>
