@@ -7,12 +7,12 @@
 - Instal·lació de Percona. </br>
 
 Primer descarreguem el paquet de Percona des de la seva URL <b>http://www.percona.com/downloads/percona-release/redhat/0.1-4/percona-release-0.1-4.noarch.rpm</b>.
-![install Percona in CentOS 7](img/Screenshot_1.png) </br>
+![install Percona in CentOS 7](img/P1/Screenshot_1.png) </br>
 Una vegada descarregat el RPM podem revisar si tenim els repositoris <b><i>yum list | grep percona</i></b> i poder seleccionar la nostra verció a instal·lar. </br>
 Per instal·lar el Percona utilitzem la següent comanda <b><i>yum install Percona-Server-server-56</i></b>, el nom varia depenent de la versió. </br>
-![alt text](img/Screenshot_4.png) </br>
+![alt text](img/P1/Screenshot_4.png) </br>
 Esperem a que descargui lo necessari per a la instal·lació i ja estariem de la instal·lació, nomes faltaria comprovar si el servei esta en execució. </br>
-![alt text](img/Screenshot_6.png) </br>
+![alt text](img/P1/Screenshot_6.png) </br>
 
  - Securització:
 
@@ -30,7 +30,7 @@ Els fitxers es guarden fisicament en <b><i>/var/lib/mysql</i></b>
 
 6. El servei de MySQL (mysqld) escolta al port 3306. Quina modificació/passos caldrien fer per canviar aquest port a 33306 per exemple? Important: No realitzis els canvis. Només indica els passos que faries. </br>
 Primer tindriem que configurar el arxiu <b><i>my.cnf</i></b> i afeguir les següents linies en el fitxer. </br>
-![alt text](img/Screenshot_7.png) </br>
+![alt text](img/P1/Screenshot_7.png) </br>
 Guardem i reiniciem el servei <b><i>service mysql restart</i></b>
 
 </br></br></br>
