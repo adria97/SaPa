@@ -14,7 +14,8 @@ Per instal·lar el Percona utilitzem la següent comanda <b><i>yum install Perco
 Esperem a que descargui lo necessari per a la instal·lació i ja estariem de la instal·lació, nomes faltaria comprovar si el servei esta en execució. </br>
 ![alt text](img/P1/Screenshot_6.png) </br>
 
- - Securització:
+- Securització:
+
 
 2. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server. </br>
 <b><i>service mysql start | stop | restart | status</i></b>
@@ -30,7 +31,7 @@ Els fitxers es guarden fisicament en <b><i>/var/lib/mysql</i></b>
 
 6. El servei de MySQL (mysqld) escolta al port 3306. Quina modificació/passos caldrien fer per canviar aquest port a 33306 per exemple? Important: No realitzis els canvis. Només indica els passos que faries. </br>
 Primer tindriem que configurar el arxiu <b><i>my.cnf</i></b> i afeguir les següents linies en el fitxer. </br>
-![alt text](img/P1/Screenshot_7.png) </br>
+![Canvi de Port de Percona](img/P1/Screenshot_7.png) </br>
 Guardem i reiniciem el servei <b><i>service mysql restart</i></b>
 
 </br></br></br>
@@ -40,4 +41,4 @@ Guardem i reiniciem el servei <b><i>service mysql restart</i></b>
 1. Instal·lació.
 
 2. Connexió a MongoDB. </br>
-Per poder-nos connectar a la base de dades de MongoDB tenim que introduïr lo següent: <b><i>/bin/mongo</i></b> o de la forma mes sencilla <b><i>mongo -u dbuser -p dbpassword</i></b>
+Per poder-nos connectar a la base de dades de MongoDB tenim que introduïr lo següent: <b><i>mongo -u dbuser -p dbpassword</i></b>
