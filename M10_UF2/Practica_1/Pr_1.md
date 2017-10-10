@@ -51,7 +51,7 @@ S’ha de crear el fitxer  “mongodb-org-3.4.repo” a l’arrel “/etc/yum.re
 A continuació executem la comanda yum install per instal·lar MongoDB: <b><i>yum install -y mongodb-org</b></i> </br>
   Aquesta comanda ens instal·larà tots els paquets necessaris per utilitzar MongoDB ![alt text](img/P2/Screenshot_1.png)
 Per iniciar el servei de mongodb (mongod), utilitzem la comanda: <b><i>service mongod start</b></i> </br>
-A més també podem comprovar que el servei està actiu amb: <b><i>systemctl status mongod</b></i>![alt text](img/P2/Screenshot_7.png) </br>
+A més també podem comprovar que el servei està actiu amb: <b><i>systemctl status mongod</b></i>. Si està actiu, estarà <i>active (running)</i>, sino estarà <i>inactive (dead)</i>![alt text](img/P2/Screenshot_7.png) </br>
 
 2. Connexió a MongoDB. </br>
 
