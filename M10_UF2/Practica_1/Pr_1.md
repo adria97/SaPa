@@ -27,7 +27,12 @@ Els fitxer de configuració es troben en <b><i>/etc/my.cnf</i></b>
 Els fitxers es guarden fisicament en <b><i>/var/lib/mysql</i></b>
 
 5. Crea un usuari anomenat asix en el sistema operatiu i en SGBD de tal manera que aquest usuari del sistema operatiu no hagi d'introduir l'usuari i password cada vegada que cridem al client mysql? </br>
-
+Per fer-ho primer tenim que crear el usuari en el sitema
+![Canvi de Port de Percona](img/P1/Screenshot_7.png) </br>
+Després tenim que configurar el fitxer my.cnf i introduïr les següents línies:
+![Canvi de Port de Percona](img/P1/Screenshot_13.png) </br>
+I per comprovar que em entrat amb aquest usuari fem le següent sentencia SQL.
+![Canvi de Port de Percona](img/P1/Screenshot_14.png) </br>
 
 6. El servei de MySQL (mysqld) escolta al port 3306. Quina modificació/passos caldrien fer per canviar aquest port a 33306 per exemple? Important: No realitzis els canvis. Només indica els passos que faries. </br>
 Primer hauríem de configurar l'arxiu <b><i>my.cnf</i></b> i afegir les següents linies en el fitxer. </br>
