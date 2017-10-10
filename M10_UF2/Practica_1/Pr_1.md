@@ -30,7 +30,7 @@ Els fitxers es guarden fisicament en <b><i>/var/lib/mysql</i></b>
 
 
 6. El servei de MySQL (mysqld) escolta al port 3306. Quina modificació/passos caldrien fer per canviar aquest port a 33306 per exemple? Important: No realitzis els canvis. Només indica els passos que faries. </br>
-Primer tindriem que configurar el arxiu <b><i>my.cnf</i></b> i afeguir les següents linies en el fitxer. </br>
+Primer hauríem de configurar l'arxiu <b><i>my.cnf</i></b> i afegir les següents linies en el fitxer. </br>
 ![Canvi de Port de Percona](img/P1/Screenshot_7.png) </br>
 Guardem i reiniciem el servei <b><i>service mysql restart</i></b>
 
@@ -38,7 +38,22 @@ Guardem i reiniciem el servei <b><i>service mysql restart</i></b>
 
 ## Part - 2 MongoDB
 
-1. Instal·lació.
+1. Instal·lació. </br>
+S’ha de crear el fitxer  “mongodb-org-3.4.repo” a l’arrel “/etc/yum.repos.d” amb la següent informació dins:
+<p><i> [mongodb-org-3.4] </br>
+    name=MongoDB Repository </br>
+    baseurl=https://repo.mongodb.org/yum/redhat/7Server/mongodb-org/3.4/x86_64 </br>
+    gpgcheck=1 </br>
+    enabled=1 </br> 
+    gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc </i></p></br>
+    
+A continuació executem la comanda yum install per instal·lar MongoDB: <b><i>yum install -y mongodb-org</b></i> </br>
+  Aquesta comanda ens instal·larà tots els paquets necessaris per utilitzar MongoDB ![alt text](img/P2/Screenshot_1.png)
+Per iniciar el servei de mongodb (mongod), utilitzem la comanda: <b><i>service mongod start</b></i> </br>
+A més també podem comprovar que el servei està actiu amb: <b><i>systemctl status mongod</b></i> </br>
 
 2. Connexió a MongoDB. </br>
-Per poder-nos connectar a la base de dades de MongoDB tenim que introduïr lo següent: <b><i>mongo -u dbuser -p dbpassword</i></b>.
+Per entrar a la shell de MongoDB, només cal cridar al programa utilitzant la paraula <i><b>mongo</i></b> </br>
+Un cop allà, podem anar canviant entre BD amb la comanda <i><b>use [nomdb]</i></b> </br>
+Per crear un usuari (amb rols a la BD), hem de fer un petit script. L'usuari es crearà a la DB on estem situats. Aquí hi ha un petit exemple, on hi afegim un parell de rols:
+Per poder-nos connectar a la base de dades de MongoDB hem d'introduïr la següent comanda: <b><i>mongo -u [usuari] -p[contrasenya]</i></b>.
