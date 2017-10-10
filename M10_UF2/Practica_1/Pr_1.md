@@ -39,6 +39,7 @@ Guardem i reiniciem el servei <b><i>service mysql restart</i></b>
 ## Part - 2 MongoDB
 
 1. Instal·lació. </br>
+
 S’ha de crear el fitxer  “mongodb-org-3.4.repo” a l’arrel “/etc/yum.repos.d” amb la següent informació dins: </br>
 <p><i> [mongodb-org-3.4] </br>
     name=MongoDB Repository </br>
