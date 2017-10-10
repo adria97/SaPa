@@ -58,4 +58,5 @@ A més també podem comprovar que el servei està actiu amb: <b><i>systemctl sta
 Per entrar a la shell de MongoDB, només cal cridar al programa utilitzant la paraula <i><b>mongo</i></b> </br>
 Un cop allà, podem anar canviant entre BD amb la comanda <i><b>use [nomdb]</i></b> </br>
 Per crear un usuari (amb rols a la BD), hem de fer un petit script. L'usuari es crearà a la DB on estem situats. Aquí hi ha un petit exemple, on hi afegim un parell de rols: ![alt text](img/P2/Screenshot_8.png) </br>
-Per poder connectar-nos a la base de dades de MongoDB amb el nostre usuari, hem d'introduïr la següent comanda: <b><i>db.auth('[usuari]','[contrasenya]')</i></b>.
+Per poder connectar-nos a la base de dades de MongoDB amb el nostre usuari, hem d'introduïr la següent comanda: <b><i>db.auth('[usuari]','[contrasenya]')</i></b>. </br>
+Per sortir del shell de MongoDB, simplement hem d'escriure <i><b>exit</i></b>.
