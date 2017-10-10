@@ -50,10 +50,10 @@ S’ha de crear el fitxer  “mongodb-org-3.4.repo” a l’arrel “/etc/yum.re
 A continuació executem la comanda yum install per instal·lar MongoDB: <b><i>yum install -y mongodb-org</b></i> </br>
   Aquesta comanda ens instal·larà tots els paquets necessaris per utilitzar MongoDB ![alt text](img/P2/Screenshot_1.png)
 Per iniciar el servei de mongodb (mongod), utilitzem la comanda: <b><i>service mongod start</b></i> </br>
-A més també podem comprovar que el servei està actiu amb: <b><i>systemctl status mongod</b></i> </br>
+A més també podem comprovar que el servei està actiu amb: <b><i>systemctl status mongod</b></i>![alt text](img/P2/Screenshot_7.png) </br>
 
 2. Connexió a MongoDB. </br>
 Per entrar a la shell de MongoDB, només cal cridar al programa utilitzant la paraula <i><b>mongo</i></b> </br>
 Un cop allà, podem anar canviant entre BD amb la comanda <i><b>use [nomdb]</i></b> </br>
-Per crear un usuari (amb rols a la BD), hem de fer un petit script. L'usuari es crearà a la DB on estem situats. Aquí hi ha un petit exemple, on hi afegim un parell de rols:
-Per poder-nos connectar a la base de dades de MongoDB hem d'introduïr la següent comanda: <b><i>mongo -u [usuari] -p[contrasenya]</i></b>.
+Per crear un usuari (amb rols a la BD), hem de fer un petit script. L'usuari es crearà a la DB on estem situats. Aquí hi ha un petit exemple, on hi afegim un parell de rols: ![alt text](img/P2/Screenshot_8.png) </br>
+Per poder connectar-nos a la base de dades de MongoDB hem d'introduïr la següent comanda: <b><i>mongo -u [usuari] -p[contrasenya]</i></b>.
