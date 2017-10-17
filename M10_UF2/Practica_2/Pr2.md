@@ -12,7 +12,7 @@ Teni que crear també les carpetes i donar-li permisos. </br>
 Per comprovar si estan activats fem servir la sentencia SQL que em fet servir abans. </br>
 ![alt text](img/Screenshot_N1.png) </br>
 3. Modifica el fitxer de configuració i desactiva els logs de binary, slow query i genral. Nota: Simplament desactiva'ls no borris altres paràmetres com la ruta dels fitxers, etc... </br>
-Per fer-ho nomes tenim que editar el fitxer i canviar el valor d'activacio que es <b><i>''</i></b> per el valor de desactivació que es <b><i>'0'</i></b>. </br>
+Per fer-ho nomes tenim que editar el fitxer i canviar el valor d'activacio que es <b><i>'1'</i></b> per el valor de desactivació que es <b><i>'0'</i></b>. </br>
 ![alt text](img/Screenshot_N2.png) </br>
 
 4. Activa la els logs en temps d'execució mitjançant la sentència SET GLOBAL. També canvia el destí de log general a una taula (paràmetre log_output). Quines són les sentències que has utilitzat? A quina taula registres els logs general? </br>
