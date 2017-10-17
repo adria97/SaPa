@@ -2,7 +2,7 @@
 
 ## Part - 1 Percona Server
 
-1. Indica clarament els passos per reprodurïr la instal·lació en un altra màquina.
+1. Indica clarament els passos per reproduïr la instal·lació en un altra màquina.
 
 - Instal·lació de Percona. </br>
 
