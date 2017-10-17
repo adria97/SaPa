@@ -20,7 +20,7 @@ Per poder fer la securització de MySQL Percona, es tant senzill com escriure la
 Es posible que la contrasenya no sigui la que tinguem en el nostre ordinador, aixì que segurament ens ha genera una contrasenya segura el mateix Percona. </br>
 Per saber quina es utilitzarem la següent comanda: </br>
 ![alt text](img/P1/Screenshot_N1.png) </br>
-Lo mes segur es que no poguem canviar la contrasenya a 'patata' ja que no compleix la politica de seguretat minima que te predefinida. Per poder-ho canviar tenim que entrar a MySQL i executar la següent comanda per saber quina es la politica actual. </br>
+Lo mes segur es que no poguem canviar la contrasenya a <b><i>'patata'</i></b> ja que no compleix la politica de seguretat minima que te predefinida. Per poder-ho canviar tenim que entrar a MySQL i executar la següent comanda per saber quina es la politica actual. </br>
 ![alt text](img/P1/Screenshot_N2.png) </br>
 I per modificar la politica es tant senzill com modificar el fitxer <b><i>my.cnf</i></b> i agregar les següents linies al fitxer. </br>
 ![alt text](img/P1/Screenshot_N3.png) </br>
