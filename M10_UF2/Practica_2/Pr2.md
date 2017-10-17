@@ -11,6 +11,7 @@ Teni que crear també les carpetes i donar-li permisos. </br>
 2. Comprova l'estat de les opcions de log que has utilitzat mitjançant una sessió de mysql client. </br>
 Per comprovar si estan activats fem servir les sentencies SQL següents. <b><i>SHOW GLOBAL VARIABLES WHERE Variable_name LIKE '%log'; SHOW GLOBAL VARIABLES WHERE Variable_name LIKE 'log_out%';</i></b> </br>
 ![alt text](img/Screenshot_N.png) </br>
+![alt text](img/Screenshot_N4.png) </br>
 
 3. Modifica el fitxer de configuració i desactiva els logs de binary, slow query i genral. Nota: Simplament desactiva'ls no borris altres paràmetres com la ruta dels fitxers, etc... </br>
 Per fer-ho nomes tenim que editar el fitxer i canviar el valor d'activacio que es <b><i>'1'</i></b> per el valor de desactivació que es <b><i>'0'</i></b>. </br>
