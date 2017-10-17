@@ -12,7 +12,7 @@ Una vegada descarregat el RPM podem revisar si tenim els repositoris <b><i>yum l
 Per instal·lar el Percona utilitzem la següent comanda <b><i>yum install Percona-Server-server-57</i></b>, el nom varia depenent de la versió. </br>
 ![alt text](img/P1/Screenshot_4.png) </br>
 Esperem a que descargui lo necessari per a la instal·lació i ja estariem de la instal·lació, nomes faltaria comprovar si el servei esta en execució. </br>
-![alt text](img/P1/Screenshot_6.png) </br>
+![alt text](img/P1/Screenshot_6_2.png) </br>
 
 - Securització: </br>
 Per poder fer la securització de MySQL Percona, es tant senzill com escriure la següent comanda <b><i>mysql_secure_installation</i></b>, això ens obrira un petit asistent per donar seguretat bàsica al nostre mysql. </br>
