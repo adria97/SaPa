@@ -1,9 +1,9 @@
 # Configuració SGBD
 
 1. Quins són els logs activats per defecte? Com ho has fet per comprovar-ho? </br>
-Entrant a mysql i provant la següent sentencia SQL <b><i>SHOW GLOBAL VARIABLES WHERE Variable_name LIKE ‘%log%’ AND (Value = ‘1’ OR Value = ‘ON’)</i></b>, que ens mostrara una llista de tots els logs que estiguin activats. </br>
+Entrant a mysql i provant la següent sentencia SQL <b><i>SHOW GLOBAL VARIABLES WHERE Variable_name LIKE ‘%log’ AND Value = ‘1’ OR Value = ‘ON’</i></b>, que ens mostrara una llista de tots els logs que estiguin activats. </br>
 Activa si no ho estan i indica les configuracions necessàries per activar-los. Indica les rutes dels fitxer de log de Binary, Slow Query i General. Quins paràmetres has modificat? </br>
-Per activar els logs primer tenim que editar el fitxer  <b><i> /etc/percona-server </i> </b> i insertar lo següent. </br>
+Per activar els logs primer tenim que editar el fitxer  <b><i>/etc/percona-server.conf.d/mysqld.cnf</i></b> i insertar lo següent. </br>
 ![alt text](img/Screenshot_4.png) </br>
 Teni que crear també les carpetes i donar-li permisos. </br>
 ![alt text](img/Screenshot_3.png) </br>
