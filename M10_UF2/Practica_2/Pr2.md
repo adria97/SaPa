@@ -21,11 +21,13 @@ Per fer-ho nomes tenim que editar el fitxer i canviar el valor d'activacio que e
 Per activar el log desde una sentencia SQL farem servir la següent comanda <b><i>SET GLOBAL general_log=1;</i></b>. </br>
 ![alt text](img/Screenshot_N3.png) </br>
 I aquesta altre per modificar la ruta del log per a que ho faci ha una taula: <b><i>SET GLOBAL log_output=TABLE;</i></b>
+![alt text](img/Screenshot_N5.png) </br>
 
 5. Carrega la BD Sakila localitzada a la web. </br>
 ![alt text](img/Screenshot_1.png) </br>
 
 6. Compte el numero de sentències CREATE TABLE dins del general log mitjançant: </br>
+![alt text](img/Screenshot_N6.png) </br>
 
 7. Executa una query mitjançant la funció SLEEP(11) per tal de que es guardi en el log de Slow Query. Mostra el contingut del log demostrant-ho. </br>
 
