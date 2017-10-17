@@ -15,6 +15,7 @@ Esperem a que descargui els arxius necessaris per la instal·lació. Un cop fina
 ![alt text](img/P1/Screenshot_6_2.png) </br>
 
 - Securització: </br>
+
 Per poder fer la securització de MySQL Percona, es tant senzill com escriure la comanda <b><i>mysql_secure_installation</i></b>. Això ens obrirà un petit asistent per donar seguretat bàsica al nostre mysql. </br>
 ![alt text](img/P1/Screenshot_15.png) </br>
 Es posible que la contrasenya no sigui la que tinguem en el nostre ordinador, aixì que segurament el mateix Percona ens generarà una contrasenya segura. </br>
