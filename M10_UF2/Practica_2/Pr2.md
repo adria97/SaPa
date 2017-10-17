@@ -15,5 +15,14 @@ Per comprovar si estan activats fem servir la sentencia SQL que em fet servir ab
 Per fer-ho nomes tenim que editar el fitxer i canviar el valor d'activacio que es <b><i>''</i></b> per el valor de desactivació que es <b><i>'0'</i></b>. </br>
 ![alt text](img/Screenshot_N2.png) </br>
 
+4. Activa la els logs en temps d'execució mitjançant la sentència SET GLOBAL. També canvia el destí de log general a una taula (paràmetre log_output). Quines són les sentències que has utilitzat? A quina taula registres els logs general? </br>
+
+
 5. Carrega la BD Sakila localitzada a la web. </br>
 ![alt text](img/Screenshot_1.png) </br>
+
+6. Compte el numero de sentències CREATE TABLE dins del general log mitjançant: </br>
+
+7. Executa una query mitjançant la funció SLEEP(11) per tal de que es guardi en el log de Slow Query. Mostra el contingut del log demostrant-ho. </br>
+
+8. Assegura't que el Binary Log estigui activat i borra tots els logs anteriors mitjançant la sentència RESET MASTER. </br>
