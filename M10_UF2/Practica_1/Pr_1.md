@@ -17,11 +17,12 @@ Esperem a que descargui lo necessari per a la instal·lació i ja estariem de la
 - Securització: </br>
 Per poder fer la securització de MySQL Percona, es tant senzill com escriure la següent comanda <b><i>mysql_secure_installation</i></b>, això ens obrira un petit asistent per donar seguretat bàsica al nostre mysql. </br>
 ![alt text](img/P1/Screenshot_15.png) </br>
-Es posible que la contrasenya no sigui la que tinguem en el nostre ordinador, aixi que ens ahura genera una contrasenya segura el mateix Percona. Per saber quina es utilitzarem la següent comanda: </br>
+Es posible que la contrasenya no sigui la que tinguem en el nostre ordinador, aixì que segurament ens ha genera una contrasenya segura el mateix Percona. </br>
+Per saber quina es utilitzarem la següent comanda: </br>
 ![alt text](img/P1/Screenshot_N1.png) </br>
 Lo mes segur es que no poguem canviar la contrasenya a 'patata' ja que no compleix la politica de seguretat minima que te predefinida. Per poder-ho canviar tenim que entrar a MySQL i executar la següent comanda per saber quina es la politica actual. </br>
 ![alt text](img/P1/Screenshot_N2.png) </br>
-I per modificar la politica es tant senzill com modificar el fitxer 'my.cnf' i agregar les següents linies al fitxer. </br>
+I per modificar la politica es tant senzill com modificar el fitxer <b><i>my.cnf</i></b> i agregar les següents linies al fitxer. </br>
 ![alt text](img/P1/Screenshot_N3.png) </br>
 
 2. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server. </br>
