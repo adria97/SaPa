@@ -19,7 +19,7 @@ Per fer-ho nomes tenim que editar el fitxer i canviar el valor d'activacio que e
 4. Activa la els logs en temps d'execució mitjançant la sentència SET GLOBAL. També canvia el destí de log general a una taula (paràmetre log_output). Quines són les sentències que has utilitzat? A quina taula registres els logs general? </br>
 Per activar el log desde una sentencia SQL farem servir la següent comanda <b><i>SET GLOBAL general_log=1;</i></b>. </br>
 ![alt text](img/Screenshot_N3.png) </br>
-I aquesta altre per modificar la ruta del log
+I aquesta altre per modificar la ruta del log per a que ho faci ha una taula: <b><i>SET GLOBAL log_output=TABLE;</i></b>
 
 5. Carrega la BD Sakila localitzada a la web. </br>
 ![alt text](img/Screenshot_1.png) </br>
