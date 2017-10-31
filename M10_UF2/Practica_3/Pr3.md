@@ -29,7 +29,7 @@ Per finalitzar, comprovem que MyRocks estigui instal·lat i activat utilitzant l
 
 Per importar una BD amb l'engine que volem, hem de modificar l'esquema DDL de la BD, i posar-hi el motor d'emmagatzematge amb el que volem guardar les taules utilitzant <i><b>ENGINE=MyISAM</b></i>. També és aconsellable tenir MyISAM com a engine predeterminat a l'hora d'importar la BD. </br> ![canviar engine a myisam](img/Screenshot_7.png) </br>
 
-Ara només falta importar l'esquema de la BD Sakila. Per fer-ho, podem utilitzar la comanda <i><b>SOURCE /arrel/schema.sql</b></i> dins la shell de MySQL. </br> ![importar sakila](img/Screenshot_8.png) </br>
+Ara només falta importar l'esquema de la BD Sakila. Per fer-ho, podem utilitzar la comanda <i><b>SOURCE /arrel/schema.sql</b></i> dins la shell de MySQL. </br> ![importar sakila myisam](img/Screenshot_8.png) </br>
 
 Per veure els fitxers que ens ha creat la BD i quant ocupen, utilitzarem la comanda <i><b>ls -ls /var/lib/mysql/sakila</b></i>, que és el directori on es situa l'informació de la nostra BD. </br> ![veure fitxers sakila](img/Screenshot_9.png) </br>
 
@@ -41,4 +41,14 @@ Hi ha 6 extensions diferents, i cada document, segons al seva extensió, una con
 - .opt: Guarda la configuració de la DB.
 - .TRG: Conté els triggers que estan associats a la taula.
 - .TRN: Conté el nom dels triggers associats a la taula. Juntament amb el .TRG, aquest fitxer defineix el trigger.
+
+
+## Activitat 2. INNODB part I. REALITZA ELS SEGÜENTS APARTATS
+
+
+1. Importa la BD Sakila com a taules InnoDB. </br>
+
+Abans d'importar la BD, comprovem que totes les taules de l'esquema Sakila tinguin l'engine de les taules amb InnoDB (Igual que a la primera imatge de l'exercici 4 de l'activitat 1). També configurem el fitxer <i>my.cnf</i> amb el paràmetre <i>default-storage-engine=InnoDB</i> perquè el motor per defecte sigui InnoDB (Com en l'exercici 2 de activitat 1).
+
+Un cop fets aquests passos, importem la BD amb la comanda <i><b>SOURCE</b></i>. </br> ![importar sakila innodb](img/Screenshot_10.png) </br>
 
