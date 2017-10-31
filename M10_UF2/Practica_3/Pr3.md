@@ -23,8 +23,11 @@ Per instal·lar el motor d'emmagatzematge MyRocks, hem d'utilitzar la comanda <i
 
 Un cop instal·lat l'engine MyRocks, l'hem d'activar. Per fer-ho, només hem de posar la comanda <i><b>ps-admin --enable-rocksdb -u root -p[contrasenya]</b></i>. Més informació sobre MyRocks a Percona Server: https://www.percona.com/doc/percona-server/LATEST/myrocks/install.html</br> ![activar myrocks](img/Screenshot_5.png)</br>
 
-Per finalitzar, comprovem que MyRocks estigui instal·lat i activat utilitzant la comanda <i><b>SHOW ENGINES;</b></i>. </br> ![myrocks activat](img/Screenshot_6.png)
+Per finalitzar, comprovem que MyRocks estigui instal·lat i activat utilitzant la comanda <i><b>SHOW ENGINES;</b></i>. </br> ![myrocks activat](img/Screenshot_6.png) </br></br>
 
 4. Importa la BD Sakila com a taules MyISAM. Fes els canvis necessaris per importar la BD Sakila perquè totes les taules siguin de tipus MyISAM. Mira quins són els fitxers físics que ha creat, quan ocupen i quines són les seves extensions. Mostra'n una captura de pantalla i indica què conté cada fitxer.</br>
 
+Per importar una BD amb l'engine que volem, hem de modificar l'esquema DDL de la BD, i posar-hi el motor d'emmagatzematge amb el que volem guardar les taules utilitzant <i><b>ENGINE=MyISAM</b></i>. També és aconsellable tenir MyISAM com a engine predeterminat a l'hora d'importar la BD. </br> ![canviar engine](img/Screenshot_7.png) </br>
+
+Ara només falta importar l'esquema de la BD Sakila. Per fer-ho, podem utilitzar la comanda <i><b>SOURCE /arrel/schema.sql</b></i> dins la shell de MySQL. </br> ![importar sakila](img/Screenshot_8.png) </br>
 
