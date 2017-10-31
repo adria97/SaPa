@@ -31,6 +31,6 @@ Per importar una BD amb l'engine que volem, hem de modificar l'esquema DDL de la
 
 Ara només falta importar l'esquema de la BD Sakila. Per fer-ho, podem utilitzar la comanda <i><b>SOURCE /arrel/schema.sql</b></i> dins la shell de MySQL. </br> ![importar sakila](img/Screenshot_8.png) </br>
 
-Per veure els fitxers que ens ha creat la BD i quant ocupen, utilitzarem la comanda <i><b>ls -ls /var/lib/mysql/sakila</b></i>, que és el directori on es situa l'informació de la nostra BD. </br> ![veure fitxers sakila](img/Screenshot_8.png) </br>
+Per veure els fitxers que ens ha creat la BD i quant ocupen, utilitzarem la comanda <i><b>ls -ls /var/lib/mysql/sakila</b></i>, que és el directori on es situa l'informació de la nostra BD. </br> ![veure fitxers sakila](img/Screenshot_9.png) </br>
 
 Hi ha 6 extensions diferents, i cada document, segons al seva extensió, una conté certa informació sobre cada taula.
