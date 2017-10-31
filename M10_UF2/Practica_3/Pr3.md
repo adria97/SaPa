@@ -27,7 +27,10 @@ Per finalitzar, comprovem que MyRocks estigui instal·lat i activat utilitzant l
 
 4. Importa la BD Sakila com a taules MyISAM. Fes els canvis necessaris per importar la BD Sakila perquè totes les taules siguin de tipus MyISAM. Mira quins són els fitxers físics que ha creat, quan ocupen i quines són les seves extensions. Mostra'n una captura de pantalla i indica què conté cada fitxer.</br>
 
-Per importar una BD amb l'engine que volem, hem de modificar l'esquema DDL de la BD, i posar-hi el motor d'emmagatzematge amb el que volem guardar les taules utilitzant <i><b>ENGINE=MyISAM</b></i>. També és aconsellable tenir MyISAM com a engine predeterminat a l'hora d'importar la BD. </br> ![canviar engine](img/Screenshot_7.png) </br>
+Per importar una BD amb l'engine que volem, hem de modificar l'esquema DDL de la BD, i posar-hi el motor d'emmagatzematge amb el que volem guardar les taules utilitzant <i><b>ENGINE=MyISAM</b></i>. També és aconsellable tenir MyISAM com a engine predeterminat a l'hora d'importar la BD. </br> ![canviar engine a myisam](img/Screenshot_7.png) </br>
 
 Ara només falta importar l'esquema de la BD Sakila. Per fer-ho, podem utilitzar la comanda <i><b>SOURCE /arrel/schema.sql</b></i> dins la shell de MySQL. </br> ![importar sakila](img/Screenshot_8.png) </br>
 
+Per veure els fitxers que ens ha creat la BD i quant ocupen, utilitzarem la comanda <i><b>ls -ls /var/lib/mysql/sakila</b></i>, que és el directori on es situa l'informació de la nostra BD. </br> ![veure fitxers sakila](img/Screenshot_8.png) </br>
+
+Hi ha 6 extensions diferents, i cada document, segons al seva extensió, una conté certa informació sobre cada taula.
