@@ -33,4 +33,12 @@ Ara només falta importar l'esquema de la BD Sakila. Per fer-ho, podem utilitzar
 
 Per veure els fitxers que ens ha creat la BD i quant ocupen, utilitzarem la comanda <i><b>ls -ls /var/lib/mysql/sakila</b></i>, que és el directori on es situa l'informació de la nostra BD. </br> ![veure fitxers sakila](img/Screenshot_9.png) </br>
 
-Hi ha 6 extensions diferents, i cada document, segons al seva extensió, una conté certa informació sobre cada taula.
+Hi ha 6 extensions diferents, i cada document, segons al seva extensió, una conté certa informació sobre cada taula. </br>
+
+- .frm: Guarda la informació de la estructura de la taula.
+- .MYI: Guarda la informació dels índex de la taula.
+- .MYD: Guarda les dades de la taula.
+- .opt: Guarda la configuració de la DB.
+- .TRG: Conté els triggers que estan associats a la taula.
+- .TRN: Conté el nom dels triggers associats a la taula. Juntament amb el .TRG, aquest fitxer defineix el trigger.
+
