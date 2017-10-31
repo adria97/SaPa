@@ -31,7 +31,7 @@ Per importar una BD amb l'engine que volem, hem de modificar l'esquema DDL de la
 
 Ara només falta importar l'esquema de la BD Sakila. Per fer-ho, podem utilitzar la comanda <i><b>SOURCE /arrel/schema.sql</b></i> dins la shell de MySQL. </br> ![importar sakila myisam](img/Screenshot_8.png) </br>
 
-Per veure els fitxers que ens ha creat la BD i quant ocupen, utilitzarem la comanda <i><b>ls -ls /var/lib/mysql/sakila</b></i>, que és el directori on es situa l'informació de la nostra BD. </br> ![veure fitxers sakila](img/Screenshot_9.png) </br>
+Per veure els fitxers que ens ha creat la BD i quant ocupen, utilitzarem la comanda <i><b>ls -ls /var/lib/mysql/sakila</b></i>, que és el directori on es situa l'informació de la nostra BD. </br> ![veure fitxers sakila myisam](img/Screenshot_9.png) </br>
 
 Hi ha 6 extensions diferents, i cada document, segons al seva extensió, una conté certa informació sobre cada taula. </br>
 
@@ -55,3 +55,10 @@ Un cop fets aquests passos, importem la BD amb la comanda <i><b>SOURCE</b></i>. 
 
 2. Quin/quins són els fitxers de dades? A on es troben i quin és la seva mida? </br>
 
+Un cop importada la BD, podem veure els fitxers amb la comanda utilitzada en l'exercici anterior: <i><b>ls -ls /var/lib/mysql/sakila</b></i>, i veiem que alguns fitxers tenen una extensió diferent a quan hem utilitzat MyISAM. </br> ![veure fitxers sakila innodb](img/Screenshot_11.png) </br>
+
+La principal diferència és que no té extensions .MYI ni .MYD, però les extensions .frm, .opt, .TRG i .TRN les manté. L'extensió nova és la següent: </br>
+
+- .ibd: Guarda les dades i els índexs de les taules o de cada taula en cas de que estiguin els fitxers individuals. </br></br>
+
+3. Canvia la configuració del MySQL perquè: </br>
