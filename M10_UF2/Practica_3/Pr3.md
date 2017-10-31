@@ -42,13 +42,16 @@ Hi ha 6 extensions diferents, i cada document, segons al seva extensió, una con
 - .TRG: Conté els triggers que estan associats a la taula.
 - .TRN: Conté el nom dels triggers associats a la taula. Juntament amb el .TRG, aquest fitxer defineix el trigger.
 
+</br>
 
 ## Activitat 2. INNODB part I. REALITZA ELS SEGÜENTS APARTATS
 
 
 1. Importa la BD Sakila com a taules InnoDB. </br>
 
-Abans d'importar la BD, comprovem que totes les taules de l'esquema Sakila tinguin l'engine de les taules amb InnoDB (Igual que a la primera imatge de l'exercici 4 de l'activitat 1). També configurem el fitxer <i>my.cnf</i> amb el paràmetre <i>default-storage-engine=InnoDB</i> perquè el motor per defecte sigui InnoDB (Com en l'exercici 2 de activitat 1).
+Abans d'importar la BD, comprovem que totes les taules de l'esquema Sakila tinguin l'engine de les taules amb InnoDB (igual que a la primera imatge de l'exercici 4 de l'activitat 1). També configurem el fitxer <i>my.cnf</i> amb el paràmetre <i>default-storage-engine=InnoDB</i> perquè el motor per defecte sigui InnoDB (com en l'exercici 2 de activitat 1).
 
-Un cop fets aquests passos, importem la BD amb la comanda <i><b>SOURCE</b></i>. </br> ![importar sakila innodb](img/Screenshot_10.png) </br>
+Un cop fets aquests passos, importem la BD amb la comanda <i><b>SOURCE</b></i>. </br> ![importar sakila innodb](img/Screenshot_10.png) </br></br>
+
+2. Quin/quins són els fitxers de dades? A on es troben i quin és la seva mida? </br>
 
