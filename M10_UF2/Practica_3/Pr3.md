@@ -21,6 +21,6 @@ Per instal·lar el motor d'emmagatzematge MyRocks, hem d'utilitzar la comanda <i
 
     Consell: Per utilitzar comandes de Linux dins del shell de MySQL, podem fer servir \!
 
-Un cop instal·lat l'engine MyRocks, l'hem d'activar. Per fer-ho, només hem d'afegir el paràmetre <i><b>--enable-rocksdb</b></i> a l'hora d'iniciar sessió amb l'usuari root a MySQL. </br> ![activar myrocks](img/Screenshot_5.png) </br></br>
+Un cop instal·lat l'engine MyRocks, l'hem d'activar. Per fer-ho, només hem de posar la comanda <i><b>ps-admin --enable-rocksdb -u root -p[contrasenya]</b></i>. Més informació sobre MyRocks a Percona Server: https://www.percona.com/doc/percona-server/LATEST/myrocks/install.html</br> ![activar myrocks](img/Screenshot_5.png) </br></br>
 
 4. Importa la BD Sakila com a taules MyISAM. Fes els canvis necessaris per importar la BD Sakila perquè totes les taules siguin de tipus MyISAM. Mira quins són els fitxers físics que ha creat, quan ocupen i quines són les seves extensions. Mostra'n una captura de pantalla i indica què conté cada fitxer.
