@@ -59,6 +59,8 @@ Un cop importada la BD, podem veure els fitxers amb la comanda utilitzada en l'e
 
 La principal diferència és que no té extensions .MYI ni .MYD, però les extensions .frm, .opt, .TRG i .TRN les manté. L'extensió nova és la següent: </br>
 
-- .ibd: Guarda les dades i els índexs de les taules o de cada taula en cas de que estiguin els fitxers individuals. </br></br>
+- .ibd: Guarda les dades i els índexs de les taules o de cada taula en cas de que estiguin els fitxers individuals.
+
+Utilitzant l'engine InnoDB, les dades es guardaran a la ruta <i><b>/var/lib/mysql</b></i>, i el fitxer s'anomena <i>ibdata1</i>. </br> ![fitxers dades innodb](img/Screenshot_12.png) </br></br>
 
 3. Canvia la configuració del MySQL perquè: </br>
