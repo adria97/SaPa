@@ -81,6 +81,13 @@ Per poder canviar la mida de l'autoincrement del nostre tablespace, utilitzarem 
 
 La configuració quedarà així: </br> ![configuracio activitat2](img/Screenshot_15.png) </br>
 
-I aquest és el missatge d'error que veiem al .log quan la mida inicial està configurada en només 1MB. </br> ![error configuracio activitat2](img/Screenshot_16.png) </br></br>
+I aquest és el missatge d'error que veiem al .log quan la mida inicial està configurada en només 1MB. </br> ![error configuracio activitat2](img/Screenshot_16.png) </br>
+
+</br>
+
+## Activitat 3. INNODB part II. REALITZA ELS SEGÜENTS APARTATS.
+
+
+1. Partint de l'esquema anterior configura el Percona Server perquè cada taula generi el seu propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a on vulgueu). </br>
 
 
