@@ -77,8 +77,8 @@ Per canviar la ruta dels fitxers de tablespace, hem de posar el paràmetre de co
 
 Per poder generar dis fitxers i amb la mida que nosaltres volem, hem d'utilitzar el paràmetre <i>innodb_data_file_path</i>. Per definir la mida de cada fitxer, utilitzarem dos punts (:) i per definir un altre fitxer, utilitzarem punt i coma (;). Com a mínim ha de ser de 5MB.
 
-Per poder canviar la mida de l'autoincrement del nostre tablespace, utilitzarem el paràmetre <i>innodb_autoextend_increment</i>. Al igual que passa amb les mides de l'anterior fitxer, l'autoincrement només pot ser de 5MB en 5MB. Vam provar de fer-ho amb 1MB, però ens hi va sortir un missatge d'error. La configuració final és la mateixa que en la següent captura però canviant el valor de l'últim paràmetre per <i>5M</i>. </br> [configuracio activitat2](img/Screenshot_15.png) </br>
+Per poder canviar la mida de l'autoincrement del nostre tablespace, utilitzarem el paràmetre <i>innodb_autoextend_increment</i>. Al igual que passa amb les mides de l'anterior fitxer, l'autoincrement només pot ser de 5MB en 5MB. Vam provar de fer-ho amb 1MB, però ens hi va sortir un missatge d'error. La configuració final és la mateixa que en la següent captura però canviant el valor de l'últim paràmetre per <i>5M</i>. </br> ![configuracio activitat2](img/Screenshot_15.png) </br>
 
-I aquest és el missatge d'error quan està configurat en només 1MB. </br> [error configuracio activitat2](img/Screenshot_16.png) </br> </br>
+I aquest és el missatge d'error que veiem al .log quan està configurat en només 1MB. </br> ![error configuracio activitat2](img/Screenshot_16.png) </br> </br>
 
 
