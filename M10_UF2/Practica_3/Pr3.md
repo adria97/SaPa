@@ -75,9 +75,11 @@ Utilitzant l'engine InnoDB, les dades es guardaran a la ruta <i><b>/var/lib/mysq
         
 Per canviar la ruta dels fitxers de tablespace, hem de posar el paràmetre de configuració <i>innodb_data_home_dir</i> amb la ruta que volem al fitxer <i>mysqld.cnf</i>.
 
-Per poder generar dis fitxers i amb la mida que nosaltres volem, hem d'utilitzar el paràmetre <i>innodb_data_file_path</i>. Per definir la mida de cada fitxer, utilitzarem dos punts (:) i per definir un altre fitxer, utilitzarem punt i coma (;). Tambépodem definir-hi la ruta, juntament amb el nom. En aquest cas hem creat un fitxer al directori <i><b>disc1/</b></i> i l'altre a <i><b>disc2/</b></i>. Com a mínim ha de ser de 5MB.
+Per poder generar dis fitxers i amb la mida que nosaltres volem, hem d'utilitzar el paràmetre <i>innodb_data_file_path</i>. Per definir la mida de cada fitxer, utilitzarem dos punts (:) i per definir un altre fitxer, utilitzarem punt i coma (;). També podem definir-hi la ruta, juntament amb el nom. En aquest cas hem creat un fitxer al directori <i><b>disc1/</b></i> i l'altre a <i><b>disc2/</b></i>. Com a mínim ha de ser de 5MB.
 
-Per poder canviar la mida de l'autoincrement del nostre tablespace, utilitzarem el paràmetre <i>innodb_autoextend_increment</i>. Per defecte, si no confgurem aques paràmetre, s'autoincrementarà de 8MB en 8MB. La configuració quedarà així: </br> ![configuracio activitat2](img/Screenshot_15.png) </br>
+Per poder canviar la mida de l'autoincrement del nostre tablespace, utilitzarem el paràmetre <i>innodb_autoextend_increment</i>. Per defecte, si no confgurem aques paràmetre, s'autoincrementarà de 8MB en 8MB. </br>
+
+La configuració quedarà així: </br> ![configuracio activitat2](img/Screenshot_15.png) </br>
 
 I aquest és el missatge d'error que veiem al .log quan la mida inicial està configurada en només 1MB. </br> ![error configuracio activitat2](img/Screenshot_16.png) </br></br>
 
