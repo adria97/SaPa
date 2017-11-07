@@ -68,7 +68,7 @@ Utilitzant l'engine InnoDB, les dades es guardaran a la ruta <i><b>/var/lib/mysq
     1. Canviar la localització dels fitxers del tablespace de sistema per defecte a /discs-mysql/
     2. Tinguem dos fitxers corresponents al tablespace de sistema.
     3. Tots dos han de tenir la mateixa mida inicial (5MB) 
-    4. El tablespace ha de creixer de 5MB en 5MB.
+    4. El tablespace ha de creixer de 1MB en 1MB.
     5. Situa aquests fitxers (de manera relativa a la localització per defecte) en una nova localització simulant el següent:
         1. /discs-mysql/disk1/primer fitxer de dades → simularà un disc dur
         2. /discs-mysql/disk2/segon fitxer de dades → simularà un segon disc dur. </br>
@@ -77,8 +77,8 @@ Per canviar la ruta dels fitxers de tablespace, hem de posar el paràmetre de co
 
 Per poder generar dis fitxers i amb la mida que nosaltres volem, hem d'utilitzar el paràmetre <i>innodb_data_file_path</i>. Per definir la mida de cada fitxer, utilitzarem dos punts (:) i per definir un altre fitxer, utilitzarem punt i coma (;). Com a mínim ha de ser de 5MB.
 
-Per poder canviar la mida de l'autoincrement del nostre tablespace, utilitzarem el paràmetre <i>innodb_autoextend_increment</i>. Al igual que passa amb les mides de l'anterior fitxer, l'autoincrement només pot ser de 5MB en 5MB. Vam provar de fer-ho amb 1MB, però ens hi va sortir un missatge d'error. La configuració final és la mateixa que en la següent captura però canviant el valor de l'últim paràmetre per <i>5M</i>. </br> ![configuracio activitat2](img/Screenshot_15.png) </br>
+Per poder canviar la mida de l'autoincrement del nostre tablespace, utilitzarem el paràmetre <i>innodb_autoextend_increment</i>. Per defecte, si no confgurem aques paràmetre, s'autoincrementarà de 8MB en 8MB. La configuració quedarà així: </br> ![configuracio activitat2](img/Screenshot_15.png) </br>
 
-I aquest és el missatge d'error que veiem al .log quan està configurat en només 1MB. </br> ![error configuracio activitat2](img/Screenshot_16.png) </br> </br>
+I aquest és el missatge d'error que veiem al .log quan la mida inicial està configurada en només 1MB. </br> ![error configuracio activitat2](img/Screenshot_16.png) </br> </br>
 
 
