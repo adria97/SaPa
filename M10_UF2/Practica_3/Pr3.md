@@ -64,3 +64,13 @@ La principal diferència és que no té extensions .MYI ni .MYD, però les exten
 Utilitzant l'engine InnoDB, les dades es guardaran a la ruta <i><b>/var/lib/mysql</b></i>, i el fitxer s'anomena <i>ibdata1</i>. </br> ![fitxers dades innodb](img/Screenshot_12.png) </br></br>
 
 3. Canvia la configuració del MySQL perquè: </br>
+
+    1. Canviar la localització dels fitxers del tablespace de sistema per defecte a /discs-mysql/
+    2. Tinguem dos fitxers corresponents al tablespace de sistema.
+    3. Tots dos han de tenir la mateixa mida inicial (5MB) 
+    4. El tablespace ha de creixer de 5MB en 5MB.
+    5. Situa aquests fitxers (de manera relativa a la localització per defecte) en una nova localització simulant el següent:
+        1. /discs-mysql/disk1/primer fitxer de dades → simularà un disc dur
+        2. /discs-mysql/disk2/segon fitxer de dades → simularà un segon disc dur. </br>
+        
+
