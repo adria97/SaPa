@@ -10,7 +10,7 @@ Per veure els motors d'emmagatzematge que podem utilitzar, utilitzarem la comand
 
 2. Com puc saber quin és el motor d’emmagatzematge per defecte? Mostra com canviar aquest paràmetre de tal manera que les noves taules que creem a la BD per defecte utilitzin el motor MyISAM?
 
-Amb la mateixa comanda anterior,  a la columna "SUPPORT", podem veure els motors d'emmagatzematge actius (<i>YES</i>), els que no ho estàn (<i>NO</i>) i el motor d'emmagatzematge per defecte (<i>DEFAULT</i>). Per canviar el motor d'emmagatzematge per defecte a MyISAM, hem d'editar el fitxer de configuració <i><b>my.cnf</b></i> i posar el paràmetre <i>default-storage-engine=[Nom]</i>. ![canviar engine per defecte](img/Screenshot_2.png) </br>
+Amb la mateixa comanda anterior,  a la columna "SUPPORT", podem veure els motors d'emmagatzematge actius (<i>YES</i>), els que no ho estàn (<i>NO</i>) i el motor d'emmagatzematge per defecte (<i>DEFAULT</i>). Per canviar el motor d'emmagatzematge per defecte a MyISAM, hem d'editar el fitxer de configuració <i><b>mysqld.cnf</b></i> i posar el paràmetre <i>default-storage-engine=[Nom]</i>. ![canviar engine per defecte](img/Screenshot_2.png) </br>
 
 Per veure si el canvi ha estat correcte, tornem a utilitzar la comanda <i><b>SHOW ENGINES;</b></i>. </br>
 ![canvi engine correcte](img/Screenshot_3.png) </br></br>
@@ -73,4 +73,12 @@ Utilitzant l'engine InnoDB, les dades es guardaran a la ruta <i><b>/var/lib/mysq
         1. /discs-mysql/disk1/primer fitxer de dades → simularà un disc dur
         2. /discs-mysql/disk2/segon fitxer de dades → simularà un segon disc dur. </br>
         
+Per canviar la ruta dels fitxers de tablespace, hem de posar el paràmetre de configuració <i>innodb_data_home_dir</i> amb la ruta que volem al fitxer <i>mysqld.cnf</i>.
+
+Per poder generar dis fitxers i amb la mida que nosaltres volem, hem d'utilitzar el paràmetre <i>innodb_data_file_path</i>. Per definir la mida de cada fitxer, utilitzarem dos punts (:) i per definir un altre fitxer, utilitzarem punt i coma (;). Com a mínim ha de ser de 5MB.
+
+Per poder canviar la mida de l'autoincrement del nostre tablespace, utilitzarem el paràmetre <i>innodb_autoextend_increment</i>. Al igual que passa amb les mides de l'anterior fitxer, l'autoincrement només pot ser de 5MB en 5MB. Vam provar de fer-ho amb 1MB, però ens hi va sortir un missatge d'error. La configuració final és la mateixa que en la següent captura però canviant el valor de l'últim paràmetre per <i>5M</i>. </br> [configuracio activitat2](img/Screenshot_15.png) </br>
+
+I aquest és el missatge d'error quan està configurat en només 1MB. </br> [error configuracio activitat2](img/Screenshot_16.png) </br> </br>
+
 
