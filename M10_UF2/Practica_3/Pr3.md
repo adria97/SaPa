@@ -90,4 +90,17 @@ I aquest és el missatge d'error que veiem al .log quan la mida inicial està co
 
 1. Partint de l'esquema anterior configura el Percona Server perquè cada taula generi el seu propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a on vulgueu). </br>
 
-Per fer aquest apartat, primer veurem els fitxers que ens genera InnoDB sense la generació d'un tspace propi per cada taula.
+InnoDB per defecte guarda les dades i els índexs en un fitxer conjunt (.ibd), tot i que també podem fer que ens  generi un fixer per cada taula
+
+
+
+    
+ 
+
+Per activar la creació d'un tablespace per taula, hem de poser el paràmetre <i>innodb_file_per_table=ON</i> a l'arxiu de configuració. </br> ![file per table](img/Screenshot_17.png) </br>
+
+  2. Després del canvi què ha passat amb els fitxers que contenien les dades de la BD de Sakila? Fes les captures necesàries per complementar la resposta. </br>
+    
+Després d'haver posat el paràmetre anterior, carreguem la BD Sakila i en comprovem els seus fitxers de configuració. Cada taula ha creat el seu propi fitxer tablespace, com podem veure en aquestes dues imatges. </br> ![sakila tspace](img/Screenshot_16.5.png) </br></br>
+
+
