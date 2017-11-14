@@ -90,3 +90,4 @@ I aquest és el missatge d'error que veiem al .log quan la mida inicial està co
 
 1. Partint de l'esquema anterior configura el Percona Server perquè cada taula generi el seu propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a on vulgueu). </br>
 
+Per fer aquest apartat, primer veurem els fitxers que ens genera InnoDB sense la generació d'un tspace propi per cada taula.
