@@ -97,4 +97,24 @@ InnoDB per defecte guarda les dades i els índexs en un fitxer conjunt (.ibd), t
 
 Per activar la creació d'un tablespace per taula, hem de poser el paràmetre <i>innodb_file_per_table=ON</i> a l'arxiu de configuració. </br> ![file per table](img/Screenshot_17.png) </br>
 
-Després d'haver posat el paràmetre anterior, carreguem la BD Sakila i en comprovem els seus fitxers de configuració. Cada taula ha creat el seu propi fitxer tablespace, com podem veure en aquestes dues imatges. </br> ![sakila tspace](img/Screenshot_16.5.png) </br></br>
+Després d'haver posat el paràmetre anterior, carreguem la BD Sakila i en comprovem els seus fitxers de configuració. Cada taula ha creat el seu propi fitxer tablespace, com podem veure en aquestes dues imatges. </br> ![sakila tspace](img/Screenshot_16.5.png) </br>
+
+</br>
+
+## Activitat 4. INNODB part III. REALITZA ELS SEGÜENTS APARTATS.
+
+
+1. Crea un tablespace anomenat 'ts1' situat a /discs-mysql/disc1/ i col·loca les taules actor, address i category de la BD Sakila. </br>
+
+Creem el tablespace <i>ts1</i> amb les taules i l'engine indicat i la ruta que pertoca amb la següent sentència a través del shell de MySQL: 
+
+    CREATE TABLESPACE ts1
+    ADD DATAFILE "/discs-mysql/disc1/ts1.ibd"
+    ENGINE=InnoDB;
+    
+![file per table](img/2017-11-07_19_28_34.png) </br>
+
+2. Crea un altre tablespace anomenat 'ts2' situat a /discs-mysql/disc2/ i col·loca-hi la resta de taules.
+3. Comprova que pots realitzar operacions DML a les taules dels dos tablespaces.
+4. Quines comandes i configuracions has realitzat per fer els dos apartats anteriors?
+5. Checkpoint: Mostra al professor els canvis realitzats i que la BD continua funcionant
