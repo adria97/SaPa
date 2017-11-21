@@ -85,7 +85,7 @@ I aquest és el missatge d'error que veiem al .log quan la mida inicial està co
 
 </br>
 
-## Activitat 3. INNODB part II. REALITZA ELS SEGÜENTS APARTATS.
+## Activitat 3. INNODB part II. REALITZA ELS SEGÜENTS APARTATS
 
 
 1. Partint de l'esquema anterior configura el Percona Server perquè cada taula generi el seu propi tablespace en una carpeta anomenada tspaces (aquesta pot estar situada a on vulgueu). </br>
@@ -128,7 +128,7 @@ Per fer aquests dos apartats, només hem fet servir un parell de comandes. La de
 
 </br>
 
-## Activitat 7. Storage Engine CSV.
+## Activitat 7. Storage Engine CSV
 
 
 1. Documenta i posa exemple de com utilitzar ENGINE CSV. </br>
@@ -146,3 +146,12 @@ Un cop creats els usuaris, comprovem que s'hagin creat correctament els usuaris 
 Per últim, podem mirar l'arxiu de dades de la nostra BD per veure com ha guardat la informació en format CSV. La ruta pot veriar segons on ho haguem indicat nosaltres anteriorment.</br> ![fitxer csv](img/2017-11-14_19_26_24.png) </br>
 
 Com a curiositat, l'ENGINE CSV no permet valors nuls a les taules. Com es pot veure en el següent exemple, ens marcarà un error quan intentem crear una taula amb un camp sense afegir-hi el <i><b>NOT NULL</b></i>. </br> ![error camp nul csv](img/2017-11-14_19_38_41.png)</br>
+
+</br>
+
+## Webgrafia
+
+
+Glossari d'extensions de Percona Server: https://www.percona.com/doc/percona-xtrabackup/LATEST/glossary.html </br>
+Diccionari de paràmetres d'InnoDB: https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html </br>
+Paràmetre file-per-table d'InnoDB: https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_file_per_table </br>
