@@ -124,3 +124,8 @@ Ara provarem de fer un INSERT a una de les taules, i com podem veure, ha funcion
 
 4. Quines comandes i configuracions has realitzat per fer els dos apartats anteriors? </br>
 
+Per fer aquests dos apartats, només hem fet servir un parell de comandes. La de creació dels tablespaces i la sentència DML, en aquest cas un insert, per comprovar si realment ens funciona el tablespace. Per posar un exemple ràpid, hem importat BD Sakila, hem fet un <i><b>USE Sakila</b></i> i importar la taula que volem al tablespace <i>ts1</i>. </br> ![consulta dml](img/2017-11-07_19_31_01.png) </br>
+
+</br>
+
+
