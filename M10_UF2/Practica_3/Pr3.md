@@ -116,14 +116,11 @@ Creem el tablespace <i>ts1</i> amb les taules i l'engine indicat i la ruta que p
 
 2. Crea un altre tablespace anomenat 'ts2' situat a /discs-mysql/disc2/ i col·loca-hi la resta de taules. </br>
 
-Per fer aquest punt, farem exactament el mateix que en l'anterior, però canviant el directori i nom del tablespace per <i>/discs-mysql/disc2/ts2.ibd</i>. Així quedaria el resultat final amb els dos discs creats: </br> 
+Per fer aquest punt, farem exactament el mateix que en l'anterior, però canviant el directori i nom del tablespace per <i>/discs-mysql/disc2/ts2.ibd</i>. Així quedaria el resultat final amb els dos discs creats: </br> ![creacio disks ts](img/2017-11-14_16_48_13.png) </br> 
 
-3. Comprova que pots realitzar operacions DML a les taules dels dos tablespaces. </br> ![creacio disks ts](img/2017-11-14_16_48_13.png) </br> 
+3. Comprova que pots realitzar operacions DML a les taules dels dos tablespaces. </br> 
 
 Ara provarem de fer un INSERT a una de les taules, i com podem veure, ha funcionat perfectament. </br> ![consulta dml](img/2017-11-14_17_11_22.png) </br>
 
 4. Quines comandes i configuracions has realitzat per fer els dos apartats anteriors? </br>
-
-
-
 
