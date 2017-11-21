@@ -128,4 +128,13 @@ Per fer aquests dos apartats, només hem fet servir un parell de comandes. La de
 
 </br>
 
+## Activitat 7. Storage Engine CSV.
 
+
+1. Documenta i posa exemple de com utilitzar ENGINE CSV. </br>
+
+Per utilitzar ENGINE CSV és molt senzill, només hem de modificar l'engine de la taula, al igual que hem fet anteriorment a l'activitat 1.4. Creem una taula i la declarem perquè tingui l'engine com a CSV amb la següent sentència: <i><b>ENGINE=CSV</b></i>. </br> ![engine csv](img/2017-11-14_17_58_07.png) </br>
+
+Per afegir les dades a la taula, fem un INSERT com fariem a amb qualsevol taula
+
+2. Cal documentar els passos que has hagut de realitzar per preparar l'exemple: configuracions, instruccions DML, DDL, etc... </br>
