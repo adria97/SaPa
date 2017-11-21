@@ -135,6 +135,12 @@ Per fer aquests dos apartats, només hem fet servir un parell de comandes. La de
 
 Per utilitzar ENGINE CSV és molt senzill, només hem de modificar l'engine de la taula, al igual que hem fet anteriorment a l'activitat 1.4. Creem una taula i la declarem perquè tingui l'engine com a CSV amb la següent sentència: <i><b>ENGINE=CSV</b></i>. </br> ![engine csv](img/2017-11-14_17_58_07.png) </br>
 
-Per afegir les dades a la taula, fem un INSERT com fariem a amb qualsevol taula
-
 2. Cal documentar els passos que has hagut de realitzar per preparar l'exemple: configuracions, instruccions DML, DDL, etc... </br>
+
+Per fer aquest exemple hem creat la taula com hem documentat en l'anterior exercici. Només hem modificat l'engine i l'hem creat com fariem normalment. </br>
+
+Per seguir amb l'exemple, hem inserit dades a la taula com fariem normalment utilitzant un INSERT. A part de l'usuari "Adrià", també hi hem afegit "Guille" i "Enrique" de la mateixa manera que aquesta captura. </br> ![afegir usuaris csv](img/2017-11-14_17_59_33.png) </br>
+
+Un cop creats els usuaris, comprovem que s'hagin creat correctament els usuaris fent un SELECT a la taula. </br> ![select taula csv](img/2017-11-14_18_01_26.png) </br>
+
+Per últim, podem mirar l'arxiu de dades de la nostra BD per veure com ha guardat la informació en format CSV. La ruta pot veriar segons on ho haguem indicat nosaltres anteriorment.</br> ![fitxer csv](img/2017-11-14_19_26_24.png)
