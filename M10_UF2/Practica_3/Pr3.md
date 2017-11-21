@@ -143,4 +143,6 @@ Per seguir amb l'exemple, hem inserit dades a la taula com fariem normalment uti
 
 Un cop creats els usuaris, comprovem que s'hagin creat correctament els usuaris fent un SELECT a la taula. </br> ![select taula csv](img/2017-11-14_18_01_26.png) </br>
 
-Per últim, podem mirar l'arxiu de dades de la nostra BD per veure com ha guardat la informació en format CSV. La ruta pot veriar segons on ho haguem indicat nosaltres anteriorment.</br> ![fitxer csv](img/2017-11-14_19_26_24.png)
+Per últim, podem mirar l'arxiu de dades de la nostra BD per veure com ha guardat la informació en format CSV. La ruta pot veriar segons on ho haguem indicat nosaltres anteriorment.</br> ![fitxer csv](img/2017-11-14_19_26_24.png) </br>
+
+Com a curiositat, l'ENGINE CSV no permet valors nuls a les taules. Com es pot veure en el següent exemple, ens marcarà un error quan intentem crear una taula amb un camp sense afegir-hi el <i><b>NOT NULL</b></i>. </br> 2017-11-14_19_38_41.png </br>
