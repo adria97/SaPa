@@ -50,7 +50,10 @@ Comprovem que hi ha dins la ruta <i>/var/lib/mysql</i>, i s'hi poden veure dos f
 
 - Realitza un instrucció DML, per exemple INSERT, UPDATE o DELETE. </br>
 
-Per fer aquest exemple, hem creat una taula anomenada "pro". Per fer la prova farem varis INSERT dins d'aquesta taula per posteriorment comprovar si els logs funcionen com han de funcionar. </br> ![inserts prova](img/2017-11-28_17_43_17.png) </br> </br>
+Per fer aquest exemple, hem creat una taula anomenada "pro". Per fer la prova farem varis INSERT dins d'aquesta taula. </br> ![inserts prova](img/2017-11-28_17_43_17.png) </br> 
+
+També hem decidit provar amb un UPDATE a la mateixa taula, per tal de fer més proves i que el resultat sigui més divers. </br> ![updates prova](img/2017-11-28_17_53_09.png) </br> </br>
 
 - Obre un altre terminal i utilitzant l'eina mysqlbinlog mira el contingut del fitxer <PRIMER LLETRA DEL NOM + 1r COGNOM>rep.000001. Quin és el seu contingut? </br>
 
+Per comprovar el contingut del fitxer log on hi ha la informació dela INSERTS i UPDATE anteriors, hem d'utilitzar la sentència <i><b>mysqlbinlog enorat_gorriols_atarensi.000001</b></i>. </br> ![updates prova](img/2017-11-28_18_51_07.png) </br> </br>
