@@ -43,9 +43,7 @@ Afegim el paràmetre al fitxer de configuració com hem fet ja anteriorment. La 
 
 Comprovem que hi ha dins la ruta <i>/var/lib/mysql</i>, i s'hi poden veure dos fitxers que comencen per <b>enorat_gorriols_atarensi</b>:
 
-  * <i><b>enorat_gorriols_atarensi.000001</b></i>: És el fitxer que inclou les dades de log, és a dir, el log en sí. 
-  * <i><b>enorat_gorriols_atarensi.index</b></i>: És el fitxer que indexa els logs. 
+  1. <i><b>enorat_gorriols_atarensi.000001</b></i>: És el fitxer que inclou les dades de log, és a dir, el log en sí. 
+  2. <i><b>enorat_gorriols_atarensi.index</b></i>: És el fitxer que indexa els logs. 
   
-</br>
-
 ![lfitxers rep](img/2017-11-28_17_31_19.png)
