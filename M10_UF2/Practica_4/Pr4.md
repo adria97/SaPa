@@ -9,28 +9,30 @@ Cal que que al realitzar un INSERT en el master veiem les dades a l'esclau al ca
 
 ### Configuració <i>Master</i>
 
+</br>
+
 - Realitza una còpia del fitxer de configuració del MySQL /etc/my.conf --> /etc/my.conf.bkp </br>
 
 Copiem l'arxiu utilitzant la comanda de còpia d'arxius de Linux <i><b>cp /etc/my.cnf /etc/my.cnf.bkp</b></i>. </br> ![backup my.cnf](img/2017-11-28_16_20_40.png) </br>
 
-Finalment, comprovem si hem copiat l'arxiu correctament al directori on pertoca. </br> ![ls backup](img/2017-11-28_16_21_43.png) </br>
+Finalment, comprovem si hem copiat l'arxiu correctament al directori on pertoca. </br> ![ls backup](img/2017-11-28_16_21_43.png) </br> </br>
 
 - Modifica el fitxer <i>/etc/my.conf</i> i activa el paràmetre <i><b>log-bin</b></i> (tal i com vàreu fer a M02) amb el nom: <i><PRIMER LLETRA DEL NOM + 1r COGNOM>rep</i>. </br>
 
-Modifiquem el fitxer <i>my.cnf</i> afegint-hi el paràmetre <i><b>log-bin=enorat_gorriols_atarensi.log</b></i>. </br> ![conf bin-log](img/2017-11-28_16_32_29.png) </br>
+Modifiquem el fitxer <i>my.cnf</i> afegint-hi el paràmetre <i><b>log-bin=enorat_gorriols_atarensi.log</b></i>. </br> ![conf bin-log](img/2017-11-28_16_32_29.png) </br> </br>
 
 - Verifica que el paràmetre server-id té un valor numèric (per defecte és 1). </br>
 
-Hem de reiniciar el servei de MySQL després d'haver fet el canvi anterior per guardar-lo, i un cop ho haguem fet, comprovem el log que hem creat utilitzant la comanda <i><b>mysqlbinlog /usr/mysql/log/enorat_gorriols_atarensi.000001</b></i>. </br> ![comprovacio log](img/2017-11-28_16_41_29.png) </br>
+Hem de reiniciar el servei de MySQL després d'haver fet el canvi anterior per guardar-lo, i un cop ho haguem fet, comprovem el log que hem creat utilitzant la comanda <i><b>mysqlbinlog /usr/mysql/log/enorat_gorriols_atarensi.000001</b></i>. </br> ![comprovacio log](img/2017-11-28_16_41_29.png) </br> </br>
 
 - Verifica que tots els paràmetres de InnoDB estiguin descomentats. </br>
 
-Tots els paràmetres venen descomentats a la versió 5.7 de Percona-Server, per tant, no hem hagut de modificar res. En cas de que volguem comentar algun paràmetre, només hem d'utilitzar el hashtag (<i>#</i>). </br>
+Tots els paràmetres venen descomentats a la versió 5.7 de Percona-Server, per tant, no hem hagut de modificar res. En cas de que volguem comentar algun paràmetre, només hem d'utilitzar el hashtag (<i>#</i>). </br> </br>
 
 - Canvia el paràmetre <i>innodb_log_buffer</i> a 10M. </br>
 
-Entrem al fitxer de configuració i hi afegim el paràmetre <i><b>innodb_log_buffer_size=10MB</b></i>. El log-buffer és un espai de memòria que manté les dades abans de ser escrites en el fitxer físic de redo log. Aquest paràmetre és el que en determina la mida. </br> ![log buffer size](img/2017-11-28_16_53_43.png) </br>
+Entrem al fitxer de configuració i hi afegim el paràmetre <i><b>innodb_log_buffer_size=10MB</b></i>. El log-buffer és un espai de memòria que manté les dades abans de ser escrites en el fitxer físic de redo log. Aquest paràmetre és el que en determina la mida. </br> ![log buffer size](img/2017-11-28_16_53_43.png) </br> </br>
 
 - Canvia o afegeix el paràmetre <i>innodb_log_files_in_group</i> a 2. </br>
 
-Afegim el paràmetre al fitxer de configuració com hem fet ja anteriorment. La sentència hauria de ser <i><b>innodb_log_files_in_group=2</b></i>. Aquest paràmetre determina el número de logs màxim en un grup de logs, i el seu paràmetre mínim és 2. </br> ![files-in-group log](img/2017-11-28_17_25_40.png) </br>
+Afegim el paràmetre al fitxer de configuració com hem fet ja anteriorment. La sentència hauria de ser <i><b>innodb_log_files_in_group=2</b></i>. Aquest paràmetre determina el número de logs màxim en un grup de logs, i el seu paràmetre mínim és 2. </br> ![files-in-group log](img/2017-11-28_17_25_40.png) </br> </br>
