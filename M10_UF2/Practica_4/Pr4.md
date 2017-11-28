@@ -15,11 +15,18 @@ Copiem l'arxiu utilitzant la comanda de còpia d'arxius de Linux <i><b>cp /etc/m
 
 Finalment, comprovem si hem copiat l'arxiu correctament al directori on pertoca. </br> ![ls backup](img/2017-11-28_16_21_43.png) </br>
 
-- Modifica el fitxer <i>/etc/my.conf</i> i activa el paràmetre <i><b>log-bin</b></i> (tal i com vàreu fer a M02) amb el nom: <i><PRIMER LLETRA DEL NOM + 1r COGNOM>rep</i> </br>
+- Modifica el fitxer <i>/etc/my.conf</i> i activa el paràmetre <i><b>log-bin</b></i> (tal i com vàreu fer a M02) amb el nom: <i><PRIMER LLETRA DEL NOM + 1r COGNOM>rep</i>. </br>
 
 Modifiquem el fitxer <i>my.cnf</i> afegint-hi el paràmetre <i><b>log-bin=enorat_gorriols_atarensi.log</b></i>. </br> ![conf bin-log](img/2017-11-28_16_40_30.png) </br>
 
-- Verifica que el paràmetre server-id té un valor numèric (per defecte és 1).
+- Verifica que el paràmetre server-id té un valor numèric (per defecte és 1). </br>
 
 Hem de reiniciar el servei de MySQL després d'haver fet el canvi anterior per guardar-lo, i un cop ho haguem fet, comprovem el log que hem creat utilitzant la comanda <i><b>mysqlbinlog /usr/mysql/log/enorat_gorriols_atarensi.000001</b></i>. </br> ![conf bin-log](img/2017-11-28_16_41_29.png) </br>
 
+- Verifica que tots els paràmetres de InnoDB estiguin descomentats. </br>
+
+
+
+- Canvia el paràmetre <i>innodb_log_buffer</i> a 10M. </br>
+
+Entrem al fitxer de configuració
