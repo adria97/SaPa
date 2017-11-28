@@ -46,4 +46,11 @@ Comprovem que hi ha dins la ruta <i>/var/lib/mysql</i>, i s'hi poden veure dos f
   1. <i><b>enorat_gorriols_atarensi.000001</b></i>: És el fitxer que inclou les dades de log, és a dir, el log en sí. 
   2. <i><b>enorat_gorriols_atarensi.index</b></i>: És el fitxer que indexa els logs. 
   
-![lfitxers rep](img/2017-11-28_17_31_19.png)
+![fitxers rep](img/2017-11-28_17_31_19.png) </br> </br>
+
+- Realitza un instrucció DML, per exemple INSERT, UPDATE o DELETE. </br>
+
+Per fer aquest exemple, hem creat una taula anomenada "pro". Per fer la prova farem varis INSERT dins d'aquesta taula per posteriorment comprovar si els logs funcionen com han de funcionar. </br> ![inserts prova](img/2017-11-28_17_43_17.png) </br> </br>
+
+- Obre un altre terminal i utilitzant l'eina mysqlbinlog mira el contingut del fitxer <PRIMER LLETRA DEL NOM + 1r COGNOM>rep.000001. Quin és el seu contingut? </br>
+
