@@ -29,4 +29,8 @@ Tots els paràmetres venen descomentats a la versió 5.7 de Percona-Server, per 
 
 - Canvia el paràmetre <i>innodb_log_buffer</i> a 10M. </br>
 
-Entrem al fitxer de configuració i hi afegim el paràmetre <i><b>innodb_log_buffer_size=10MB</b></i> per canviar la mida dels logs. </br> ![log buffer](img/2017-11-28_16_53_43.png)
+Entrem al fitxer de configuració i hi afegim el paràmetre <i><b>innodb_log_buffer_size=10MB</b></i>. El log-buffer és un espai de memòria que manté les dades abans de ser escrites en el fitxer físic de redo log. Aquest paràmetre és el que en determina la mida. </br> ![log buffer size](img/2017-11-28_16_53_43.png) </br>
+
+- Canvia o afegeix el paràmetre <i>innodb_log_files_in_group</i> a 2. </br>
+
+Afegim el paràmetre al fitxer de configuració com hem fet ja anteriorment. La sentència hauria de ser <i><b>innodb_log_files_in_group=2</b></i>. Aquest paràmetre determina el número de logs màxim en un grup de logs, i el seu paràmetre mínim és 2. </br> ![files-in-group log](img/2017-11-28_17_25_40.png) </br>
