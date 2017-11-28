@@ -36,3 +36,16 @@ Entrem al fitxer de configuració i hi afegim el paràmetre <i><b>innodb_log_buf
 - Canvia o afegeix el paràmetre <i>innodb_log_files_in_group</i> a 2. </br>
 
 Afegim el paràmetre al fitxer de configuració com hem fet ja anteriorment. La sentència hauria de ser <i><b>innodb_log_files_in_group=2</b></i>. Aquest paràmetre determina el número de logs màxim en un grup de logs, i el seu paràmetre mínim és 2. </br> ![files-in-group log](img/2017-11-28_17_25_40.png) </br> </br>
+
+- Aquí parem un el servei de MySQL, borrem tots els logs d'InnoDB del directori <i>/var/lib/mysql</i> i tornem a engegar el procés de MySQL. </br> </br>
+
+- Quants fitxers comencen amb el nom <i><PRIMER LLETRA DEL NOM + 1r COGNOM>rep</i> dins el directori <i>/var/lib/mysql</i>? Digues quins són. </br>
+
+Comprovem que hi ha dins la ruta <i>/var/lib/mysql</i>, i s'hi poden veure dos fitxers que comencen per <b>enorat_gorriols_atarensi</b>:
+
+  * <i><b>enorat_gorriols_atarensi.000001</b></i>: És el fitxer que inclou les dades de log, és a dir, el log en sí. 
+  * <i><b>enorat_gorriols_atarensi.index</b></i>: És el fitxer que indexa els logs. 
+  
+</br>
+
+![lfitxers rep](img/2017-11-28_17_31_19.png)
