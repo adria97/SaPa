@@ -76,8 +76,15 @@ Hem fet la còpia de la màquina MASTER. La màquina MASTER té la IP 192.168.47
 
 - Crea un backup de la BD a la màquina master utilitzant la sentència <i><b>$> mysqldump –-user=root –-password=vostrepwd -–master-data=2 sakila > /tmp/master_backup.sql</b></i>. </br>
 
-Utilitzem la sentència. Un cop executada, simplement ens avisarà de que és perillós utilitzar la contrasenya a la línia de comandes. </br> ![backup master](img/2017-11-28_19_17_06.png) </br>
+Utilitzem la sentència mysqldump per replicar la nostra BD. Un cop executada, simplement ens avisarà de que és perillós utilitzar la contrasenya a la línia de comandes. </br> ![backup master](img/2017-11-28_19_17_06.png) </br>
 
 - Edita el fitxer master_backup.sql i busca la línia que comenci per <i><b>--CHANGE MASTER TO...</b></i> i busca els valors MASTER_LOG_FILE i MASTER_LOG_POS. </br>
 
-Editem el fitxer indicat i busquem la línia <i>--CHANGE MASTER TO</i>. Els dos paràmetres que hi haa a la línia són MASTER_LOG_FILE i MASTER_LOG_POS. Aquest paràmetres són els que es coordinen la màquina SLAVE amb la MASTER; en el primer s'hi especifica un log concret, i en el segon 
+Editem el fitxer indicat i busquem la línia <i>--CHANGE MASTER TO</i>. Els dos paràmetres que hi haa a la línia són MASTER_LOG_FILE i MASTER_LOG_POS. Aquest paràmetres són els que es coordinen la màquina SLAVE amb la MASTER; en el primer s'hi especifica un log concret, i en el segon assigna la posició del log. </br> ![backup master](img/2017-11-28_19_18_54.png) </br>
+
+- A la màquina SLAVE...
+  - Para el servei de MySQL.
+  - Modifica el fitxer de configuració <i>/etc/mysqld.cnf</i>.
+    - Comenta els paràmetres <b>log-bin</b> i <b>binlog_format</b>. D'aquesta manera desactivarem el sistema de log-bin.
+    - Assigna un valor al paràmetre <b>server-id</b> (diferent que el del Master).
+    - Torna a engegar el servei MySQL.
