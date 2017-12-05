@@ -57,3 +57,7 @@ També hem decidit provar amb un UPDATE a la mateixa taula, per tal de fer més 
 - Obre un altre terminal i utilitzant l'eina mysqlbinlog mira el contingut del fitxer <PRIMER LLETRA DEL NOM + 1r COGNOM>rep.000001. Quin és el seu contingut? </br>
 
 Per comprovar el contingut del fitxer log on hi ha la informació dela INSERTS i UPDATE anteriors, hem d'utilitzar la sentència <i><b>mysqlbinlog enorat_gorriols_atarensi.000001</b></i>. </br> ![updates prova](img/2017-11-28_18_51_07.png) </br> </br>
+
+- Fes un FLUSH DELS LOGS utilitzant la comanda <b>FLUSH LOGS</b> dins del MySQL. Realitza una comprovació dels logs com a master mitjançant <b>SHOW MASTER LOGS</b>.
+
+La comanda <i>FLUSH LOGS;</i> serveix per generar un nou registre (log). Recordem que en l'anterior exercici, l'extensió del log era <i><b>.000001</b></i>, i després de fer el FLUSH, ens en crearà un altre. Ho podem, comprovar amb la sentència <i>SHOW MASTER LOGS;</i> </br> ![flush logs](img/2017-11-28_18_52_06.png) </br> </br>
