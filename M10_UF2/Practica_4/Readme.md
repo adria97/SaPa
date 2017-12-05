@@ -60,4 +60,11 @@ Per comprovar el contingut del fitxer log on hi ha la informació dela INSERTS i
 
 - Fes un FLUSH DELS LOGS utilitzant la comanda <b>FLUSH LOGS</b> dins del MySQL. Realitza una comprovació dels logs com a master mitjançant <b>SHOW MASTER LOGS</b>.
 
-La comanda <i>FLUSH LOGS;</i> serveix per generar un nou registre (log). Recordem que en l'anterior exercici, l'extensió del log era <i><b>.000001</b></i>, i després de fer el FLUSH, ens en crearà un altre. Ho podem, comprovar amb la sentència <i>SHOW MASTER LOGS;</i>, que ens mostra els logs que tenim a la nostra BD. </br> ![flush logs](img/2017-11-28_18_52_06.png) </br> </br>
+La comanda <i>FLUSH LOGS;</i> serveix per generar un nou registre (log). Recordem que en l'anterior exercici, l'extensió del log era <i><b>.000001</b></i>, i després de fer el FLUSH, ens en crearà un altre. Ho podem, comprovar amb la sentència <i>SHOW MASTER LOGS;</i>, que ens mostra els logs que tenim a la nostra BD. </br> ![flush logs](img/2017-11-28_18_52_06.png) </br> 
+
+</br>
+
+### Configuració <i>Slave i Master</i>
+
+</br>
+
