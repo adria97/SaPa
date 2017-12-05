@@ -72,6 +72,12 @@ La comanda <i>FLUSH LOGS;</i> serveix per generar un nou registre (log). Recorde
 
 - Esbrina quina IP tenen cadascuna de les màquines (master, slave). </br>
 
-Hem fet la còpia de la màquina MASTER. La màquina MASTER té la IP 192.168.47.10, mentre que la màquina SLAVE té la IP 192.168.47.10. </br> </br>
+Hem fet la còpia de la màquina MASTER. La màquina MASTER té la IP 192.168.47.10, mentre que la màquina SLAVE té la IP 192.168.47.12. </br> </br>
 
-- Crea un backup de la BD a la màquina master utilitzant la sentència <i><b>$> mysqldump –-user=root –-password=vostrepwd -–master-data=2 sakila > /tmp/master_backup.sql</b></i>
+- Crea un backup de la BD a la màquina master utilitzant la sentència <i><b>$> mysqldump –-user=root –-password=vostrepwd -–master-data=2 sakila > /tmp/master_backup.sql</b></i>. </br>
+
+Utilitzem la sentència. Un cop executada, simplement ens avisarà de que és perillós utilitzar la contrasenya a la línia de comandes. </br> ![backup master](img/2017-11-28_19_17_06.png) </br>
+
+- Edita el fitxer master_backup.sql i busca la línia que comenci per <i><b>--CHANGE MASTER TO...</b></i> i busca els valors MASTER_LOG_FILE i MASTER_LOG_POS. </br>
+
+Editem el fitxer indicat i busquem la línia <i>--CHANGE MASTER TO</i>. Els dos paràmetres que hi haa a la línia són MASTER_LOG_FILE i MASTER_LOG_POS. Aquest paràmetres són els que es coordinen la màquina SLAVE amb la MASTER; en el primer s'hi especifica un log concret, i en el segon 
