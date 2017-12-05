@@ -123,13 +123,13 @@ Ara hi afegirem el permís de <b>REPLICATION SLAVE</b> a l'usuari <i>slave</i> q
 
 A continuació, enllaçaerem l'SLAVE amb el master amb un seguit de paràmetres. La sintaxi per fer aquest pas, seria aquesta. </br>
 
-      mysql> CHANGE MASTER TO
-          -> MASTER_HOST = '<ip-servidor-master>',
-          -> MASTER_USER = 'slave',
-          -> MASTER_PASSWORD = 'patata',
-          -> MASTER_PORT = '3306',
-          -> MASTER_LOG_FILE = '<PRIMER LLETRA DEL NOM + 1r COGNOM>rep.000002',
-          -> MASTER_LOG_POS = <valor trobat en el pas 4>,
-          -> MASTER_CONNECT_RETRY = 10;
+    mysql> CHANGE MASTER TO
+        -> MASTER_HOST = '<ip-servidor-master>',
+        -> MASTER_USER = 'slave',
+        -> MASTER_PASSWORD = 'patata',
+        -> MASTER_PORT = '3306',
+        -> MASTER_LOG_FILE = '<PRIMER LLETRA DEL NOM + 1r COGNOM>rep.000002',
+        -> MASTER_LOG_POS = <valor trobat en el pas 4>,
+        -> MASTER_CONNECT_RETRY = 10;
 
 </br> ![master permisos slave](img/2017-11-28_19_35_17.png) </br>
