@@ -80,7 +80,7 @@ Utilitzem la sentència mysqldump per replicar la nostra BD. Un cop executada, s
 
 - Edita el fitxer master_backup.sql i busca la línia que comenci per <i><b>--CHANGE MASTER TO...</b></i> i busca els valors MASTER_LOG_FILE i MASTER_LOG_POS. </br>
 
-Editem el fitxer indicat i busquem la línia <i>--CHANGE MASTER TO</i>. Els dos paràmetres que hi haa a la línia són MASTER_LOG_FILE i MASTER_LOG_POS. Aquest paràmetres són els que es coordinen la màquina SLAVE amb la MASTER; en el primer s'hi especifica un log concret, i en el segon assigna la posició del log. </br> ![backup master](img/2017-11-28_19_18_54.png) </br>
+Editem el fitxer indicat i busquem la línia <i>--CHANGE MASTER TO</i>. Els dos paràmetres que hi haa a la línia són MASTER_LOG_FILE i MASTER_LOG_POS. Aquest paràmetres són els que es coordinen la màquina SLAVE amb la MASTER; en el primer s'hi especifica un log concret, i en el segon assigna la posició del log. </br> ![backup master](img/2017-11-28_19_18_54.png) </br></br>
 
 - A la màquina SLAVE...
   - Para el servei de MySQL.
@@ -93,5 +93,5 @@ Editem el fitxer indicat i busquem la línia <i>--CHANGE MASTER TO</i>. Els dos 
  
 Primer de tot parem el servei de MySQL amb la comanda que utilitzem normalment. Després obrim el fitxer de configuració de MySQL (situat a <i>/etc/my.cnf</i>) i busquem els dos paràmetres referents al binlog (log-bin i binlog_format). En el nostre cas només tenim el <i><b>log-bin</b></i>, i l'únic que hem de fer és comentar-lo. </br> ![slave binlog](img/2017-11-28_19_21_04.png) </br>
 
-Per últim, només hem de tornar a iniciar el servei de MySQL. Aquestes serien les comandes que hem de fer per configurar l'SLAVE (juntament amb la configuració anterior). </br> ![slave comandes](img/2017-11-28_19_21_31.png) </br> </br>
+Per últim, només hem de tornar a iniciar el servei de MySQL. Aquestes serien les comandes que hem de fer per configurar l'SLAVE (juntament amb la configuració anterior). </br> ![slave comandes](img/2017-11-28_19_21_31.png) </br></br>
 
