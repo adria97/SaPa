@@ -37,7 +37,7 @@ Entrem al fitxer de configuració i hi afegim el paràmetre <i><b>innodb_log_buf
 
 Afegim el paràmetre al fitxer de configuració com hem fet ja anteriorment. La sentència hauria de ser <i><b>innodb_log_files_in_group=2</b></i>. Aquest paràmetre determina el número de logs màxim en un grup de logs, i el seu paràmetre mínim és 2. </br> ![files-in-group log](img/2017-11-28_17_25_40.png) </br> </br>
 
-- Aquí parem el servei de MySQL, borrem tots els logs d'InnoDB del directori <i>/var/lib/mysql</i> i tornem a engegar el procés de MySQL. </br> </br>
+- Aquí parem el servei de MySQL, borrem tots els logs d'InnoDB del directori <i>/var/lib/mysql</i> i tornem a engegar el procés de MySQL. </br>
 
 - Quants fitxers comencen amb el nom <i><PRIMER LLETRA DEL NOM + 1r COGNOM>rep</i> dins el directori <i>/var/lib/mysql</i>? Digues quins són. </br>
 
@@ -68,3 +68,10 @@ La comanda <i>FLUSH LOGS;</i> serveix per generar un nou registre (log). Recorde
 
 </br>
 
+- Realitza una còpia de la màquina virtual a on tinguis SGBD MySQL. Aquesta nova màquina serà que farà d'eslau. </br>
+
+- Esbrina quina IP tenen cadascuna de les màquines (master, slave). </br>
+
+Hem fet la còpia de la màquina MASTER. La màquina MASTER té la IP 192.168.47.10, mentre que la màquina SLAVE té la IP 192.168.47.10. </br> </br>
+
+- Crea un backup de la BD a la màquina master utilitzant la sentència <i><b>$> mysqldump –-user=root –-password=vostrepwd -–master-data=2 sakila > /tmp/master_backup.sql</b></i>
