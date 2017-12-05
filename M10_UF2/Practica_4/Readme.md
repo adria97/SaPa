@@ -97,8 +97,6 @@ Per últim, només hem de tornar a iniciar el servei de MySQL. Aquestes serien l
 
 - A la màquina MASTER...
   - Afegeix l'usuari slave amb la IP de la màquina slave.
-    - --> mysql> CREATE USER 'slave'@'IP-SERVIDOR-SLAVE'
-    - --> > IDENTIFIED BY 'patata';
   - Afegix el permís de REPLICATION SLAVE a l'usuari que acabes de crear.
     - --> mysql> GRANT REPLICATION SLAVE ON *.*
     - --> > TO 'slave'@'IP-SERVIDOR-SLAVE';
@@ -106,3 +104,19 @@ Per últim, només hem de tornar a iniciar el servei de MySQL. Aquestes serien l
     
 </br>
 
+Des de la màquina MASTER afegirem un usuari a la IP assignada al nostre servidor SLAVE. Crearem l'usuari d'aquesta manera. </br>
+
+    mysql> CREATE USER 'slave'@'IP-SERVIDOR-SLAVE'
+    > IDENTIFIED BY 'patata';
+
+</br> ![master crear users](img/2017-11-28_19_27_19.png) </br>
+
+Ara hi afegirem el permís de <b>REPLICATION SLAVE</b> a l'usuari <i>slave</i> que hem creat anteriorment. Per donar-hi els permisos necessaris, hem de posar les següents sentències. </br>
+
+    mysql> GRANT REPLICATION SLAVE ON *.*
+    > TO 'slave'@'IP-SERVIDOR-SLAVE';
+    mysql> FLUSH PRIVILEGES;
+    
+</br> ![master crear users](img/2017-11-28_19_29_11.png) </br></br>
+
+- A la màquina SLAVE executa la següent comanda ajudant-te de les dades del pas 3 i 4:
