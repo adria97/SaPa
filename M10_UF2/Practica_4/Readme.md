@@ -72,7 +72,7 @@ La comanda <i>FLUSH LOGS;</i> serveix per generar un nou registre (log). Recorde
 
 - Esbrina quina IP tenen cadascuna de les màquines (master, slave). </br>
 
-Hem fet la còpia de la màquina MASTER. La màquina MASTER té la IP 192.168.47.10, mentre que la màquina SLAVE té la IP 192.168.47.12. </br> </br>
+Hem fet la còpia de la màquina MASTER. La màquina MASTER té la IP <b>192.168.47.10</b>, mentre que la màquina SLAVE té la IP <b>192.168.47.12</b>. </br> </br>
 
 - Crea un backup de la BD a la màquina master utilitzant la sentència <i><b>$> mysqldump –-user=root –-password=vostrepwd -–master-data=2 sakila > /tmp/master_backup.sql</b></i>. </br>
 
@@ -84,7 +84,14 @@ Editem el fitxer indicat i busquem la línia <i>--CHANGE MASTER TO</i>. Els dos 
 
 - A la màquina SLAVE...
   - Para el servei de MySQL.
-  - Modifica el fitxer de configuració <i>/etc/mysqld.cnf</i>.
+  - Modifica el fitxer de configuració <i>/etc/my.cnf</i>.
     - Comenta els paràmetres <b>log-bin</b> i <b>binlog_format</b>. D'aquesta manera desactivarem el sistema de log-bin.
     - Assigna un valor al paràmetre <b>server-id</b> (diferent que el del Master).
     - Torna a engegar el servei MySQL.
+ 
+</br>
+ 
+Primer de tot parem el servei de MySQL amb la comanda que utilitzem normalment. Després obrim el fitxer de configuració de MySQL (situat a <i>/etc/my.cnf</i>) i busquem els dos paràmetres referents al binlog (log-bin i binlog_format). En el nostre cas només tenim el <i><b>log-bin</b></i>, i l'únic que hem de fer és comentar-lo. </br> ![slave binlog](img/2017-11-28_19_21_04.png) </br>
+
+Per últim, només hem de tornar a iniciar el servei de MySQL. Aquestes serien les comandes que hem de fer per configurar l'SLAVE (juntament amb la configuració anterior). </br> ![slave comandes](img/2017-11-28_19_21_31.png) </br> </br>
+
