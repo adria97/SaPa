@@ -95,3 +95,14 @@ Primer de tot parem el servei de MySQL amb la comanda que utilitzem normalment. 
 
 Per últim, només hem de tornar a iniciar el servei de MySQL. Aquestes serien les comandes que hem de fer per configurar l'SLAVE (juntament amb la configuració anterior). </br> ![slave comandes](img/2017-11-28_19_21_31.png) </br></br>
 
+- A la màquina MASTER...
+  - Afegeix l'usuari slave amb la IP de la màquina slave.
+    - --> mysql> CREATE USER 'slave'@'IP-SERVIDOR-SLAVE'
+    - --> > IDENTIFIED BY 'patata';
+  - Afegix el permís de REPLICATION SLAVE a l'usuari que acabes de crear.
+    - --> mysql> GRANT REPLICATION SLAVE ON *.*
+    - --> > TO 'slave'@'IP-SERVIDOR-SLAVE';
+    - --> mysql> FLUSH PRIVILEGES;
+    
+</br>
+
