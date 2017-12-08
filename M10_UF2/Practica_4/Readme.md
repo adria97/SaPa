@@ -117,7 +117,11 @@ Ara hi afegirem el permís de <b>REPLICATION SLAVE</b> a l'usuari <i>slave</i> q
         -> TO 'slave'@'IP-SERVIDOR-SLAVE';
     mysql> FLUSH PRIVILEGES;
     
-</br> ![master permisos slave](img/2017-11-28_19_29_11.png) </br></br>
+</br> ![master permisos slave](img/2017-11-28_19_29_11.png) </br>
+
+Ara tenim que importar la base de dades que em exportat a la màquina, que en el nostre cas es una replica.</br>
+
+IMG</br>
 
 - A la màquina SLAVE executa la següent comanda ajudant-te de les dades del pas 3 i 4: </br>
 
@@ -133,3 +137,11 @@ A continuació, enllaçaerem l'SLAVE amb el master amb un seguit de paràmetres.
         -> MASTER_CONNECT_RETRY = 10;
 
 </br> ![master permisos slave](img/2017-11-28_19_35_17.png) </br>
+
+En en nostre cas em duplicat la màquina, així que tindrem que Canviar el UUID, per fer-ho tindem que eliminar el següent fitxer anomenat 'auto.cnf'. </br>
+
+IMG </br>
+
+Un cop eliminat el fitxer (amb la base de dades obiament aturada), al iniciar MYSQL es tornara a generar automaticament amb un nou UUID, i podrem observar com ja automaticament els canvis realitzats en el MASTER ja estan en el SLAVE. </br>
+
+IMG
