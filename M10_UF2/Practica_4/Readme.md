@@ -138,7 +138,11 @@ A continuació, enllaçaerem l'SLAVE amb el master amb un seguit de paràmetres.
 
 </br> ![master permisos slave](img/2017-11-28_19_35_17.png) </br>
 
-En en nostre cas em duplicat la màquina, així que tindrem que Canviar el UUID, per fer-ho tindem que eliminar el següent fitxer anomenat 'auto.cnf'. </br>
+En en nostre cas em duplicat la màquina, així que tindrem que canviar el UUID, ho sabem per que quan fem la següent comanda ens ho diu "SHOW SLAVE STATUS;" </br>
+
+IMG </br>
+
+Per fer-ho tindem que eliminar el següent fitxer anomenat 'auto.cnf'. </br>
 
 IMG </br>
 
