@@ -138,14 +138,13 @@ A continuació, enllaçaerem l'SLAVE amb el master amb un seguit de paràmetres.
 
 </br> ![master permisos slave](img/2017-11-28_19_35_17.png) </br>
 
-En en nostre cas em duplicat la màquina, així que tindrem que canviar el UUID, ho sabem per que quan fem la següent comanda ens ho diu "SHOW SLAVE STATUS;" </br>
+Després, simplement hem d'iniciar l'SLAVE amb aquesta sentència. </br> ![error uuid](img/2017-12-05_19_06_04.png) </br>
 
-IMG </br>
+En en nostre cas hem duplicat la màquina MASTER, per tant, també hem de canviar l'UUID. Per saber quin UUID tenim, hem d'utilitzar la sentència <i><b>SHOW SLAVE STATUS;</b></i>. En aquesta imatge, es mostra un error, ja que tenim el mateix UUID. </br>  </br>
 
-Per fer-ho tindem que eliminar el següent fitxer anomenat 'auto.cnf'. </br>
+Per canviar la UUID de la nostra màquina, 'auto.cnf'. </br>
 
 IMG </br>
 
 Un cop eliminat el fitxer (amb la base de dades obiament aturada), al iniciar MYSQL es tornara a generar automaticament amb un nou UUID, i podrem observar com ja automaticament els canvis realitzats en el MASTER ja estan en el SLAVE. </br>
 
-IMG
