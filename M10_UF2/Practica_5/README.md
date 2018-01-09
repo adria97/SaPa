@@ -11,7 +11,6 @@ Per fer aquesta pràctca, utilitzarem 3 Clusters i 1 Master. Les màquines seran
 4. Slave Cluster 3: NodeID = 3; HostName: Percona3; IP: 192.168.26.73
 
 </br>
-</br>
 
 Abans de començar, haurem de desactivar el firewall (en el nostre cas per ser un entorn de prova) o permetre passar els paquets pels ports que necessitem, que són els següents: <b><i>3306, 4444, 4567, 4568</i></b>. Si volem permetre passar els paquets pels ports en concret requerits, utilitzarem la comanda <b>ufw allow <i>[número de port]</i></b>. Per desctivar el firewall, utilitzarem al comanda <b>ufw disable</b>.
 
