@@ -14,6 +14,8 @@ Per fer aquesta pràctca, utilitzarem 4 Clusters.
 
 Abans de començar, haurem de desactivar el firewall (en el nostre cas per ser un entorn de prova) o permetre passar els paquets pels ports que necessitem, que són els següents: <b><i>3306, 4444, 4567, 4568</i></b>. Si volem permetre passar els paquets pels ports en concret requerits, utilitzarem la comanda <b>ufw allow <i>[número de port]</i></b>. Per desctivar el firewall, utilitzarem al comanda <b>ufw disable</b>. </br>
 
-![XtraDB*](img/xtradb1.png) </br>
+![*_XtraDB](img/1_XtraDB.png) </br>
 
-</br>
+Un cop desabilitat el firewall, procedim a instal·lar el XtraDB. </br>
+
+![*_XtraDB](img/2_XtraDB.png) </br>
