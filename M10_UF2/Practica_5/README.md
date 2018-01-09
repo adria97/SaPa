@@ -2,7 +2,7 @@
 
 ## Clustering amb Percona XtraDB Cluster
 
-Primer tindriem que desactivarel firewall (en el nostre cas per ser un entorn de prova) o permetre els paqquet perls ports <b><i>'3306, 4444, 4567, 4568'</i></b>.
+Abans de començar, haurem de desactivar el firewall (en el nostre cas per ser un entorn de prova) o permetre passar els paquets pels ports que necessitem, que són els següents: <b><i>3306, 4444, 4567, 4568</i></b>.
 </br>
 </br>
 Utilitzarem 3 Clusters i 1 Master.
