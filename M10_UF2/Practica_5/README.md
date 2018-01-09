@@ -21,7 +21,7 @@ Per poder-lo instal·lar, tenim que actualitzar ens nostrees repositoris, per fe
 
 ![*_XtraDB](img/1_XtraDB.png) </br>
 
-Un cop descarregat l'istal·lem i actualitzem la llista dels repositoris. </br>
+Un cop descarregat, desempaquetem i l'istal·lem/actualitzem la llista dels repositoris. </br>
 
 ![*_XtraDB](img/2_XtraDB.png) </br>
 
