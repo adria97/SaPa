@@ -1,0 +1,1 @@
+# Directori d'Imatges
