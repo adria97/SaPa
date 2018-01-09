@@ -1,4 +1,4 @@
-# Pràctica 5
+# Pràctica 4
 
 ## REPLICACIÓ via Binlog
 
@@ -121,7 +121,7 @@ Ara hi afegirem el permís de <b>REPLICATION SLAVE</b> a l'usuari <i>slave</i> q
 
 Ara tenim que importar la base de dades que em exportat a la màquina, que en el nostre cas es una replica.</br>
 
-IMG</br>
+</br> ![master permisos slave](img/importBK.png) </br>
 
 - A la màquina SLAVE executa la següent comanda ajudant-te de les dades del pas 3 i 4: </br>
 
@@ -142,9 +142,11 @@ Després, simplement hem d'iniciar l'SLAVE amb aquesta sentència. </br> ![error
 
 En en nostre cas hem duplicat la màquina MASTER, per tant, també hem de canviar l'UUID. Per saber quin UUID tenim, hem d'utilitzar la sentència <i><b>SHOW SLAVE STATUS;</b></i>. En aquesta imatge, es mostra un error, ja que tenim el mateix UUID. </br>  </br>
 
+</br> ![master permisos slave](img/errorUUID.png) </br>
+
 Per canviar la UUID de la nostra màquina, 'auto.cnf'. </br>
 
-IMG </br>
+</br> ![master permisos slave](img/deleteautoconf.png) </br>
 
 Un cop eliminat el fitxer (amb la base de dades obiament aturada), al iniciar MYSQL es tornara a generar automaticament amb un nou UUID, i podrem observar com ja automaticament els canvis realitzats en el MASTER ja estan en el SLAVE. </br>
 
