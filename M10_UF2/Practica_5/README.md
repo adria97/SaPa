@@ -34,3 +34,7 @@ Podem confirmar que s'han atualitzat els repositoris buscant el paquet que volem
 Al confirmar que si tenim els repositoris dels paquets, procedim a instal·lar el nostre paquet XtraDB. </br>
 
 ![*_XtraDB](img/5_XtraDB.png) </br>
+
+I per acavar ens demanarà una contrasenya. </br>
+
+![*_XtraDB](img/6_XtraDB.png) </br>
