@@ -3,7 +3,7 @@
 ## Clustering amb Percona XtraDB Cluster
 
 
-Per fer aquesta pràctca, utilitzarem 4 Clusters. Les màquines seran Ubuntu 16.04.
+Per fer aquesta pràctca, utilitzarem 4 Clusters.
 
 1. Slave Cluster 1: NodeID = 1; HostName: Percona1; IP: 192.168.26.71
 2. Slave Cluster 2: NodeID = 2; HostName: Percona2; IP: 192.168.26.72
