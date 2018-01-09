@@ -150,3 +150,30 @@ Per canviar la UUID de la nostra màquina, 'auto.cnf'. </br>
 
 Un cop eliminat el fitxer (amb la base de dades obiament aturada), al iniciar MYSQL es tornara a generar automaticament amb un nou UUID, i podrem observar com ja automaticament els canvis realitzats en el MASTER ja estan en el SLAVE. </br>
 
+</br></br></br>
+
+## GTID
+
+El sistema es similar a la replicació del BinLog. </br>
+
+En el nostre cas com partim de una màquina clonada i amb una replicació, primer tenim eliminar la replicació del MySQL del Slave amb la següent coanda: </br>
+
+![master permisos slave](img/gtid1.png) </br>
+
+Un cop eliminat la relació entre els MySQL, ja podem configurar el fitxer amb les següents línies, Serà la mateix configuracio per al Master i Slave. </br>
+
+![master permisos slave](img/gtid2.png) </br>
+
+En aquest cas no fa falta eliminar el auto.conf per que tenen UUID diferents, així que reiniciem els servei de percona. </br>
+Ara tornarem a enllaçar les màquines per a fer la replicació, pero amb el GTID.
+Per fer-ho tenim que entrar al MySQL i executar la següents línies, la IP del servidor; el usuari remot; la contrasenya del usuari; el port per el que es connectaran; i la Posició. </br>
+
+![master permisos slave](img/gtid3.png) </br>
+
+Un cop fet iniciem el enllaç. </br>
+
+![master permisos slave](img/gtid4.png) </br>
+
+I per si volem comprovar si ha funcionat, executem la següent comanda <b><i>SHOW SLAVE STATUS \G;</i></b> i busque la següent línia: </br>
+
+![master permisos slave](img/gtid5.png) </br>
