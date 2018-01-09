@@ -174,6 +174,6 @@ Un cop fet iniciem el enllaç. </br>
 
 ![master permisos slave](img/gtid4.png) </br>
 
-I per si volem comprovar si ha funcionat, executem la següent comanda <b><i>SHOW SLAVE STATUS \G;</i></b> i busque la següent línia: </br>
+I per si volem comprovar si ha funcionat, executem la següent comanda <b><i>SHOW SLAVE STATUS \G;</i></b> i buscar la següents línies: </br>
 
 ![master permisos slave](img/gtid5.png) </br>
