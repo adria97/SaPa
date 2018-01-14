@@ -34,6 +34,8 @@ El que farem a continuació és entrar a la shell de MySQL a través de l'usuari
 
 Ara només quedarà canviar aquesta contrasenya per una de més senzilla. La sentència per canviar la contrasenya a un usuari MySQL és aquesta: <b>ALTER USER '<i>[usuari]</i>'@'<i>[màquina]</i>' IDENTIFIED BY '<i>[nova contrasenya]</i>';</b>. </br></br> ![*_XtraDB](img/20_XtraDB.png) </br>
 
+Un cop arribats a aquest punt, clonarem la màquina virtual. El que faré en aquest cas serà fer una clonació completa com a backup i a partir d'aquesta clonació completa, fer-ne tres d'entrellaçades. </br>
+
 
 
 
