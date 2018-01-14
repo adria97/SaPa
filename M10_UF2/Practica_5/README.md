@@ -30,7 +30,7 @@ Un cop instal·lat XtraDB al nostre servidor, iniciarem el servei de MySQL. </br
 
 El següent pas, serà configurar una contrasenya per al nostre usuari "root" de MySQL. XtraDB li assigna a aquest usuari una contrasenya temporal, que podem veure a través del log situat a /var/log/mysqld.log. Aquesta string és aleatòria, és a dir, és diferent cada cop que instal·lem i desinstal·lem el Percona, i canvia si ho fem en una altra màquina. </br></br> ![*_XtraDB](img/18_XtraDB.png) </br>
 
-El que farem a continuació és entrar a la shell de MySQL a través de l'usuari "root" amb la contrasenya temporal que acabem d'obtenir. Per entrar-hi, haurem d'utilitzar la següent comanda: <b>mysql -u <i>[usuari]</i> -p<i>[contrasenya]<i/></b>. </br></br> ![*_XtraDB](img/19_XtraDB.png) </br>
+El que farem a continuació és entrar a la shell de MySQL a través de l'usuari "root" amb la contrasenya temporal que acabem d'obtenir. Per entrar-hi, haurem d'utilitzar la següent comanda: <b>mysql -u <i>[usuari]</i> -p<i>[contrasenya]</i></b>. </br></br> ![*_XtraDB](img/19_XtraDB.png) </br>
 
 Ara només quedarà canviar aquesta contrasenya per una de més senzilla. La sentència per canviar la contrasenya a un usuari MySQL és aquesta: <b>ALTER USER '<i>[usuari]</i>'@'<i>[màquina]</i>' IDENTIFIED BY '<i>[nova contrasenya]</i>';</b>. </br></br> ![*_XtraDB](img/20_XtraDB.png) </br>
 
