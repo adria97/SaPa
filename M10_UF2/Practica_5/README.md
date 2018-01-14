@@ -24,9 +24,9 @@ També hem de configurar les interfícies, que en el cas de CentOS, és un pèl 
 
 ![*_XtraDB](img/8_XtraDB.png) </br>
 
-També és recomenable canviar el nom de la màquina, que es pot fer fàcilment d'aquesta manera: https://www.cyberciti.biz/faq/rhel-redhat-centos-7-change-hostname-command/. </br> ![*_XtraDB](img/9_XtraDB.png) </br> ![*_XtraDB](img/10_XtraDB.png) </br> 
+També és recomenable canviar el nom de la màquina, que es pot fer fàcilment d'aquesta manera: https://www.cyberciti.biz/faq/rhel-redhat-centos-7-change-hostname-command/. </br></br> ![*_XtraDB](img/9_XtraDB.png) </br> ![*_XtraDB](img/10_XtraDB.png) </br> 
 
-També hem de desactivar SELinux per si de cas (segons la pàgina oficial de Percona). Per fer-ho, hem d'editar el fitxer <i>/etc/selinux/config</i> i editar la línia <b>SELINUX=disabled</b>. Després, únicament hem de reiniciar la màquina, i un cop reiniciada, per saber si hem desactivar correctament SELinux, hem d'utilitzar la comanda <b>getenforce</b> Per més informació, pots consultar aquesta pàgina: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-enabling_and_disabling_selinux-disabling_selinux. </br> ![*_XtraDB](img/11_XtraDB.png) </br> ![*_XtraDB](img/12_XtraDB.png) </br> 
+També hem de desactivar SELinux per si de cas (segons la pàgina oficial de Percona). Per fer-ho, hem d'editar el fitxer <i>/etc/selinux/config</i> i editar la línia <b>SELINUX=disabled</b>. Després, únicament hem de reiniciar la màquina, i un cop reiniciada, per saber si hem desactivar correctament SELinux, hem d'utilitzar la comanda <b>getenforce</b> Per més informació, pots consultar aquesta pàgina: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-enabling_and_disabling_selinux-disabling_selinux. </br></br> ![*_XtraDB](img/11_XtraDB.png) </br> ![*_XtraDB](img/12_XtraDB.png) </br> 
 
 </br>
 </br>
