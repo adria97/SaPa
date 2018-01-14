@@ -20,6 +20,9 @@ També és recomenable canviar el nom de la màquina, que es pot fer fàcilment 
 
 També hem de desactivar SELinux per si de cas (segons la pàgina oficial de Percona). Per fer-ho, hem d'editar el fitxer <i>/etc/selinux/config</i> i editar la línia <b>SELINUX=disabled</b>. Després, únicament hem de reiniciar la màquina, i un cop reiniciada, per saber si hem desactivar correctament SELinux, hem d'utilitzar la comanda <b>getenforce</b> Per més informació, pots consultar aquesta pàgina: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-enabling_and_disabling_selinux-disabling_selinux. </br></br> ![*_XtraDB](img/11_XtraDB.png) </br> ![*_XtraDB](img/12_XtraDB.png) </br>
 
+Un cop fets aquests passos previs, haurem d'instal·lar els repositoris. Per fer-ho, utilitzem següent comanda per baixar-nos la última versió de la llista de descarregables de Percona. </br></br> ![*_XtraDB](img/14_XtraDB.png) </br>
+
+Per comprovar que es paquets són els correctes podem fer un grep, i ens haurien de sortir, més o menys, d'aquesta forma. ![*_XtraDB](img/15_XtraDB.png) </br>
 
 
 </br>
