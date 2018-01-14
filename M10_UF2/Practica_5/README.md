@@ -12,15 +12,15 @@ Per fer aquesta pràctca, utilitzarem 4 Clusters.
 
 </br>
 
-Abans de començar, haurem de desactivar el firewall (en el nostre cas per ser un entorn de prova) o permetre passar els paquets pels ports que necessitem, que són els següents: <b><i>3306, 4444, 4567, 4568</i></b>. Per desactivar el firewall de CentOS, utilitzarem a comanda <b>systemctl disable firewalld</b>. </br> ![*_XtraDB](img/13_XtraDB.png) </br>
+Abans de començar, haurem de desactivar el firewall (en el nostre cas per ser un entorn de prova) o permetre passar els paquets pels ports que necessitem, que són els següents: <b><i>3306, 4444, 4567, 4568</i></b>. Per desactivar el firewall de CentOS, utilitzarem a comanda <b>systemctl disable firewalld</b>. </br></br> ![*_XtraDB](img/13_XtraDB.png) </br>
 
-També hem de configurar les interfícies, que en el cas de CentOS, és un pèl diferent a altres sistemes Linux. Podeu trobar el tutorial aquí: http://ask.xmodulo.com/configure-static-ip-address-centos7.html. La IP del node base és la 192.168.26.71, i aquí la tenim configurada. </br>
-
-![*_XtraDB](img/8_XtraDB.png) </br>
+També hem de configurar les interfícies, que en el cas de CentOS, és un pèl diferent a altres sistemes Linux. Podeu trobar el tutorial aquí: http://ask.xmodulo.com/configure-static-ip-address-centos7.html. La IP del node base és la 192.168.26.71, i aquí la tenim configurada. </br></br> ![*_XtraDB](img/8_XtraDB.png) </br>
 
 També és recomenable canviar el nom de la màquina, que es pot fer fàcilment d'aquesta manera: https://www.cyberciti.biz/faq/rhel-redhat-centos-7-change-hostname-command/. </br></br> ![*_XtraDB](img/9_XtraDB.png) </br> ![*_XtraDB](img/10_XtraDB.png) </br> 
 
-També hem de desactivar SELinux per si de cas (segons la pàgina oficial de Percona). Per fer-ho, hem d'editar el fitxer <i>/etc/selinux/config</i> i editar la línia <b>SELINUX=disabled</b>. Després, únicament hem de reiniciar la màquina, i un cop reiniciada, per saber si hem desactivar correctament SELinux, hem d'utilitzar la comanda <b>getenforce</b> Per més informació, pots consultar aquesta pàgina: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-enabling_and_disabling_selinux-disabling_selinux. </br></br> ![*_XtraDB](img/11_XtraDB.png) </br> ![*_XtraDB](img/12_XtraDB.png) </br> 
+També hem de desactivar SELinux per si de cas (segons la pàgina oficial de Percona). Per fer-ho, hem d'editar el fitxer <i>/etc/selinux/config</i> i editar la línia <b>SELINUX=disabled</b>. Després, únicament hem de reiniciar la màquina, i un cop reiniciada, per saber si hem desactivar correctament SELinux, hem d'utilitzar la comanda <b>getenforce</b> Per més informació, pots consultar aquesta pàgina: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-enabling_and_disabling_selinux-disabling_selinux. </br></br> ![*_XtraDB](img/11_XtraDB.png) </br> ![*_XtraDB](img/12_XtraDB.png) </br>
+
+
 
 </br>
 </br>
