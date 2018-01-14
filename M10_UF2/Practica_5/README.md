@@ -16,18 +16,28 @@ Abans de començar, haurem de desactivar el firewall (en el nostre cas per ser u
 
 ![*_XtraDB](img/0_XtraDB.png) </br>
 
-Un cop deshabilitat el firewall, procedim a instal·lar l'XtraDB. </br>
-Per poder-lo instal·lar, primer hem de descarregar i instal·lar els repositoris, o bé actualitzar-los en cas que els tinguem descarregats. </br>
+Un cop deshabilitat el firewall, procedim a instal·lar l'XtraDB. Per poder-lo instal·lar, primer hem de descarregar i instal·lar els repositoris, o bé actualitzar-los en cas que els tinguem descarregats. </br>
 
 ![*_XtraDB](img/1_XtraDB.png) </br>
 
-També hem de configurar les interfícies, que en el cas de CentOS, és un pèl diferent a altres sistemes Linux. Podeu trobar el tutorial aquí. http://ask.xmodulo.com/configure-static-ip-address-centos7.html. La IP del node base és la 192.168.26.71, i aquí la tenim configurada. </br>
+També hem de configurar les interfícies, que en el cas de CentOS, és un pèl diferent a altres sistemes Linux. Podeu trobar el tutorial aquí: http://ask.xmodulo.com/configure-static-ip-address-centos7.html. La IP del node base és la 192.168.26.71, i aquí la tenim configurada. </br>
 
 ![*_XtraDB](img/8_XtraDB.png) </br>
 
-</hr>
+També és recomenable canviar el nom de la màquina, que es pot fer fàcilment d'aquesta manera: https://www.cyberciti.biz/faq/rhel-redhat-centos-7-change-hostname-command/. </br> ![*_XtraDB](img/9_XtraDB.png) </br> ![*_XtraDB](img/10_XtraDB.png) </br> 
 
 
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 Un cop descarregat, desempaquetem i l'istal·lem/actualitzem la llista dels repositoris. </br>
 
