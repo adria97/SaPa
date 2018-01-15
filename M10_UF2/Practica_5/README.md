@@ -5,10 +5,10 @@
 
 Per fer aquesta pràctca, utilitzarem 4 Clusters.
 
-1. Slave Cluster 1: NodeID = 1; HostName: Percona1; IP: 192.168.26.71
-2. Slave Cluster 2: NodeID = 2; HostName: Percona2; IP: 192.168.26.72
-3. Slave Cluster 3: NodeID = 3; HostName: Percona3; IP: 192.168.26.73
-4. Slave Cluster 4: NodeID = 4; HostName: Percona4; IP: 192.168.26.74
+1. Node 1: NodeID = 1; HostName: Percona1; IP: 192.168.26.71
+2. Node 2: NodeID = 2; HostName: Percona2; IP: 192.168.26.72
+3. Node 3: NodeID = 3; HostName: Percona3; IP: 192.168.26.73
+4. Node 4: NodeID = 4; HostName: Percona4; IP: 192.168.26.74
 
 </br>
 
