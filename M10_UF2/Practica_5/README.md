@@ -58,7 +58,12 @@ Obrim el fitxer /etc/my.cnf i l'editem amb els següents paràmetres (personalit
     default_storage_engine=InnoDB
     innodb_autoinc_lock_mode=2
 
-Un cop editat el fitxer del primer cluster, hem de fer el mateix amb els altres, però només canviant els paràmetres ressaltats dins del requadre vermell. </br></br> ![*_XtraDB](img/23_XtraDB.png) </br>
+Un cop editat el fitxer del primer cluster, hem de fer el mateix amb els altres, però només canviant els paràmetres ressaltats dins del requadre vermell. <b>IMPORTANT! No t'oblidis de la capçalera <i>[mysqld]</i>, ja que sino no d'iniciarà el servei de MySQL</b>.</br></br> ![*_XtraDB](img/23_XtraDB.png) </br>
+
+Quan haguem configurat els fitxers de tots els clusters, haurem de crear l'usuari SST al node que farem servir com a "Bootstrapping" (cluster1) i donar-li els privilegis necessaris. Abans d'això, però, reiniciarem el servei MySQL. </br></br> ![*_XtraDB](img/24_XtraDB.png) </br> ![*_XtraDB](img/25_XtraDB.png) </br>
+
+
+
 
 
 </br>
