@@ -34,7 +34,10 @@ El que farem a continuació és entrar a la shell de MySQL a través de l'usuari
 
 Ara només quedarà canviar aquesta contrasenya per una de més senzilla. La sentència per canviar la contrasenya a un usuari MySQL és aquesta: <b>ALTER USER '<i>[usuari]</i>'@'<i>[màquina]</i>' IDENTIFIED BY '<i>[nova contrasenya]</i>';</b>. </br></br> ![*_XtraDB](img/20_XtraDB.png) </br>
 
-Un cop arribats a aquest punt, clonarem la màquina virtual. El que faré en aquest cas serà fer una clonació completa com a backup i a partir d'aquesta clonació completa, fer-ne tres d'entrellaçades. A aquestes clonacions entrellaçades, els hi haurem de canviar el hostname i la IP, tal com hem fet abans amb la primera. SELinux hauria d'estar deshabilitat, però s'aconsella posar la comanda de comprovació.</br>
+Un cop arribats a aquest punt, clonarem la màquina virtual. El que faré en aquest cas serà fer una clonació completa com a backup i a partir d'aquesta clonació completa, fer-ne tres d'entrellaçades. A aquestes clonacions entrellaçades, els hi haurem de canviar el hostname i la IP, tal com hem fet abans amb la primera. SELinux hauria d'estar deshabilitat, però s'aconsella posar la comanda de comprovació. </br>
+
+Després d'haver configurat totes les màquines del cluster, hem de comprovar que es puguin veure entre elles. Per comprovar-ho, farem pings entre totes les màquines i des de totes les màquines. Exemple. Màquina Cluster1 fent ping a Cluster2: </br></br> ![*_XtraDB](img/21_XtraDB.png) </br>
+
 
 
 
