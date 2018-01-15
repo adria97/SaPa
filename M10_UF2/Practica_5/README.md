@@ -38,6 +38,8 @@ Un cop arribats a aquest punt, clonarem la màquina virtual. El que faré en aqu
 
 Després d'haver configurat totes les màquines del cluster, hem de comprovar que es puguin veure entre elles. Per comprovar-ho, farem pings entre totes les màquines i des de totes les màquines. Exemple. Màquina Cluster1 fent ping a Cluster2: </br></br> ![*_XtraDB](img/21_XtraDB.png) </br>
 
+Ara haurem d'editar el fitxer /etc/my.cnf, però abans farem un backup d'aquest fitxer per si de cas. </br></br> ![*_XtraDB](img/22_XtraDB.png) </br>
+
 
 
 
