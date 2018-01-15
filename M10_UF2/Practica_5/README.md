@@ -44,12 +44,11 @@ Obrim el fitxer /etc/my.cnf i l'editem amb els següents paràmetres (personalit
 
     wsrep_provider=/usr/lib64/galera3/libgalera_smm.so
 
-    wsrep_cluster_name=<i>[nom cluster]</i>
-    wsrep_cluster_address=gcomm://192.168.70.61,192.168.70.62,192.168.70.63
+    wsrep_cluster_name=[nom cluster]
+    wsrep_cluster_address=gcomm://[IP node1],[IP node2],IP node3]
 
-    wsrep_node_name=<i>[nom node]</i>
-    wsrep_node_address=<i>[adreça node]</i>
-
+    wsrep_node_name=[nom node]
+    wsrep_node_address=[adreça node]
     wsrep_sst_method=xtrabackup-v2
     wsrep_sst_auth=sstuser:passw0rd
 
@@ -59,6 +58,7 @@ Obrim el fitxer /etc/my.cnf i l'editem amb els següents paràmetres (personalit
     default_storage_engine=InnoDB
     innodb_autoinc_lock_mode=2
 
+Un cop editat el fitxer del primer cluster, hem de fer el mateix amb els altres, però només canviant els paràmetres ressaltats dins del requadre vermell. </br></br> ![*_XtraDB](img/23_XtraDB.png) </br>
 
 
 </br>
