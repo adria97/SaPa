@@ -40,7 +40,24 @@ Després d'haver configurat totes les màquines del cluster, hem de comprovar qu
 
 Ara haurem d'editar el fitxer /etc/my.cnf, però abans farem un backup d'aquest fitxer per si de cas. </br></br> ![*_XtraDB](img/22_XtraDB.png) </br>
 
+Obrim el fitxer /etc/my.cnf i l'editem amb els següents paràmetres (personalitzant-los, obviament, segons les nostres necessitats).
 
+    wsrep_provider=/usr/lib64/galera3/libgalera_smm.so
+
+    wsrep_cluster_name=pxc-cluster
+    wsrep_cluster_address=gcomm://192.168.70.61,192.168.70.62,192.168.70.63
+
+    wsrep_node_name=pxc1
+    wsrep_node_address=192.168.70.61
+
+    wsrep_sst_method=xtrabackup-v2
+    wsrep_sst_auth=sstuser:passw0rd
+
+    pxc_strict_mode=ENFORCING
+
+    binlog_format=ROW
+    default_storage_engine=InnoDB
+    innodb_autoinc_lock_mode=2
 
 
 
