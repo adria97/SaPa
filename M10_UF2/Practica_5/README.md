@@ -44,11 +44,11 @@ Obrim el fitxer /etc/my.cnf i l'editem amb els següents paràmetres (personalit
 
     wsrep_provider=/usr/lib64/galera3/libgalera_smm.so
 
-    wsrep_cluster_name=pxc-cluster
+    wsrep_cluster_name=<i>[nom cluster]</i>
     wsrep_cluster_address=gcomm://192.168.70.61,192.168.70.62,192.168.70.63
 
-    wsrep_node_name=pxc1
-    wsrep_node_address=192.168.70.61
+    wsrep_node_name=<i>[nom node]</i>
+    wsrep_node_address=<i>[adreça node]</i>
 
     wsrep_sst_method=xtrabackup-v2
     wsrep_sst_auth=sstuser:passw0rd
