@@ -84,7 +84,41 @@ Si la comanda no ha donat error, iniciem MySQL i comprovem si el bootstrapping h
 
 Un cop comprovat que funciona el Bootrstrapping, haurem de crear l'usuari SST al node que farem servir com al cluster1 i donar-li els privilegis necessaris. </br></br> ![*_XtraDB](img/24_XtraDB.png) </br> ![*_XtraDB](img/25_XtraDB.png) </br>
 
-Ara haurem de configurar el segon node (cluster2). Més o menys quedarà com el primer, però aquesta seria la configuració per a aquest node. </br></br> ![*_XtraDB](img/37_XtraDB.png) </br>
+Ara haurem de configurar el segon node (cluster2). Més o menys quedarà com el primer, però la configuració per a aquest node és un pèl diferent. Per la resta de nodes serà igual.
+
+    [mysqld]
+
+    datadir=/var/lib/mysql
+    user=mysql
+
+    # Path to Galera library
+    wsrep_provider=/usr/lib64/libgalera_smm.so
+
+    # Cluster connection URL contains IPs of node#1, node#2 and node#3
+    wsrep_cluster_address=gcomm://192.168.70.71,192.168.70.72,192.168.70.73
+
+    # In order for Galera to work correctly binlog format should be ROW
+    binlog_format=ROW
+
+    # MyISAM storage engine has only experimental support
+    default_storage_engine=InnoDB
+
+    # This changes how InnoDB autoincrement locks are managed and is a requirement for Galera
+    innodb_autoinc_lock_mode=2
+
+    # Node #3 address
+    wsrep_node_address=192.168.70.72
+
+    # Cluster name
+    wsrep_cluster_name=my_centos_cluster
+
+    # SST method
+    wsrep_sst_method=xtrabackup-v2
+
+    # Authentication for SST method
+    wsrep_sst_auth="sstuser:s3cret"
+
+I aquest serà el fitxer editat. En el cas dels següents, hem de canviar només el paràmetre <b>wsrep_node_address=<i>[IP node]</i></b> </br></br> ![*_XtraDB](img/37_XtraDB.png) </br>
 
 Un cop editat l'arxiu de configuració, reiniciem el servei (a diferència de l'anterior node, que hem fet bootstrapping). </br></br> ![*_XtraDB](img/38_XtraDB.png) </br>
 
