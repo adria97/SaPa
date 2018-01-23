@@ -84,7 +84,11 @@ Si la comanda no ha donat error, iniciem MySQL i comprovem si el bootstrapping h
 
 Un cop comprovat que funciona el Bootrstrapping, haurem de crear l'usuari SST al node que farem servir com al cluster1 i donar-li els privilegis necessaris. </br></br> ![*_XtraDB](img/24_XtraDB.png) </br> ![*_XtraDB](img/25_XtraDB.png) </br>
 
+Ara haurem de configurar el segon node (cluster2). Més o menys quedarà com el primer, però aquesta seria la configuració per a aquest node. </br></br> ![*_XtraDB](img/37_XtraDB.png) </br>
 
+Un cop editat l'arxiu de configuració, reiniciem el servei (a diferència de l'anterior node, que hem fet bootstrapping). </br></br> ![*_XtraDB](img/38_XtraDB.png) </br>
+
+I per últim, tornem a executar la sentència SQL per comprovar que s'ha annexat al cluster. </br></br> ![*_XtraDB](img/39_XtraDB.png) </br> ![*_XtraDB](img/40_XtraDB.png) </br> ![*_XtraDB](img/41_XtraDB.png) </br> ![*_XtraDB](img/42_XtraDB.png) </br>
 
 
 
