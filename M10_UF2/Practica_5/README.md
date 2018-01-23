@@ -78,7 +78,7 @@ Obrim el fitxer /etc/my.cnf i l'editem amb els següents paràmetres (personalit
 
 El resultat del nostre fitxer és aquest. <b>IMPORTANT! No t'oblidis de la capçalera <i>[mysqld]</i>, ja que sino no d'iniciarà el servei de MySQL</b>: </br></br> ![*_XtraDB](img/30_XtraDB.png) </br>
 
-Un cop editat el fitxer del primer cluster, haurem de fer el bootstrapping amb el primer node. Al ser en el SO CentOS, la comanda per iniciar-lo serà aquesta. </br></br> ![*_XtraDB](img/35_XtraDB.png) </br>
+Un cop editat el fitxer del primer cluster, haurem de fer el bootstrapping amb el primer node. Al ser en el SO CentOS, la comanda per iniciar-lo serà aquesta. </br></br> ![*_XtraDB](img/36_XtraDB.png) </br>
 
 Si la comanda no ha donat error, iniciem MySQL i comprovem si el bootstrapping ha funcionat amb la següent sentència. El resultat d'aquests paràmetres hauria de ser similar. </br></br> ![*_XtraDB](img/32_XtraDB.png) </br> ![*_XtraDB](img/33_XtraDB.png) </br> ![*_XtraDB](img/34_XtraDB.png) </br> ![*_XtraDB](img/35_XtraDB.png) </br>
 
