@@ -82,13 +82,7 @@ Un cop editat el fitxer del primer cluster, haurem de fer el bootstrapping amb e
 
 Si la comanda no ha donat error, iniciem MySQL i comprovem si el bootstrapping ha funcionat amb la següent sentència. El resultat d'aquests paràmetres hauria de ser similar. </br></br> ![*_XtraDB](img/32_XtraDB.png) </br> ![*_XtraDB](img/33_XtraDB.png) </br> ![*_XtraDB](img/34_XtraDB.png) </br> ![*_XtraDB](img/35_XtraDB.png) </br>
 
-
-
-
-
-</br> hem de fer el mateix amb els altres, però només canviant els paràmetres ressaltats dins del requadre vermell.  
-
-Quan haguem configurat els fitxers de tots els clusters, haurem de crear l'usuari SST al node que farem servir com a "Bootstrapping" (cluster1) i donar-li els privilegis necessaris. Abans d'això, però, reiniciarem el servei MySQL. </br></br> ![*_XtraDB](img/24_XtraDB.png) </br> ![*_XtraDB](img/25_XtraDB.png) </br>
+Un cop comprovat que funciona el Bootrstrapping, haurem de crear l'usuari SST al node que farem servir com al cluster1 i donar-li els privilegis necessaris. </br></br> ![*_XtraDB](img/24_XtraDB.png) </br> ![*_XtraDB](img/25_XtraDB.png) </br>
 
 
 
