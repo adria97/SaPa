@@ -42,23 +42,39 @@ Ara haurem d'editar el fitxer /etc/my.cnf, però abans farem un backup d'aquest 
 
 Obrim el fitxer /etc/my.cnf i l'editem amb els següents paràmetres (personalitzant-los, obviament, segons les nostres necessitats).
 
-    wsrep_provider=/usr/lib64/galera3/libgalera_smm.so
+    [mysqld]
+    
+    datadir=/var/lib/mysql
+    user=mysql
 
-    wsrep_cluster_name=[nom cluster]
-    wsrep_cluster_address=gcomm://[IP node1],[IP node2],IP node3]
+    # Path to Galera library
+    wsrep_provider=/usr/lib64/libgalera_smm.so
 
-    wsrep_node_name=[nom node]
-    wsrep_node_address=[adreça node]
-    wsrep_sst_method=xtrabackup-v2
-    wsrep_sst_auth=sstuser:passw0rd
+    # Cluster connection URL contains the IPs of node#1, node#2 and node#3
+    wsrep_cluster_address=gcomm://192.168.70.71,192.168.70.72,192.168.70.73
 
-    pxc_strict_mode=ENFORCING
-
+    # In order for Galera to work correctly binlog format should be ROW
     binlog_format=ROW
+
+    # MyISAM storage engine has only experimental support
     default_storage_engine=InnoDB
+
+    # This changes how InnoDB autoincrement locks are managed and is a requirement for Galera
     innodb_autoinc_lock_mode=2
 
-Un cop editat el fitxer del primer cluster, hem de fer el mateix amb els altres, però només canviant els paràmetres ressaltats dins del requadre vermell. <b>IMPORTANT! No t'oblidis de la capçalera <i>[mysqld]</i>, ja que sino no d'iniciarà el servei de MySQL</b>.</br></br> ![*_XtraDB](img/231_XtraDB.png) </br>
+    # Node #1 address
+    wsrep_node_address=192.168.70.71
+
+    # SST method
+    wsrep_sst_method=xtrabackup-v2
+
+    # Cluster name
+    wsrep_cluster_name=my_centos_cluster
+
+    # Authentication for SST method
+    wsrep_sst_auth="sstuser:s3cret"
+
+Un cop editat el fitxer del primer cluster, hem de fer el mateix amb els altres, però només canviant els paràmetres ressaltats dins del requadre vermell. <b>IMPORTANT! No t'oblidis de la capçalera <i>[mysqld]</i>, ja que sino no d'iniciarà el servei de MySQL</b>.</br></br> ![*_XtraDB](img/30_XtraDB.png) </br>
 
 Quan haguem configurat els fitxers de tots els clusters, haurem de crear l'usuari SST al node que farem servir com a "Bootstrapping" (cluster1) i donar-li els privilegis necessaris. Abans d'això, però, reiniciarem el servei MySQL. </br></br> ![*_XtraDB](img/24_XtraDB.png) </br> ![*_XtraDB](img/25_XtraDB.png) </br>
 
