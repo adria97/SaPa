@@ -26,6 +26,8 @@ Per comprovar que es paquets són els correctes podem fer un grep, i ens haurien
 
 Ara només haurem d'instal·lar l'XtraDB a la nostra màquina. Per fer-ho, utlilitzarem la següent comanda. </br></br> ![*_XtraDB](img/16_XtraDB.png) </br>
 
+També es recomana instal·lar els següents paquets per evitar errors. </br></br> ![*_XtraDB](img/31_XtraDB.png) </br>
+
 Un cop instal·lat XtraDB al nostre servidor, iniciarem el servei de MySQL. </br></br> ![*_XtraDB](img/17_XtraDB.png) </br>
 
 El següent pas, serà configurar una contrasenya per al nostre usuari "root" de MySQL. XtraDB li assigna a aquest usuari una contrasenya temporal, que podem veure a través del log situat a /var/log/mysqld.log. Aquesta string és aleatòria, és a dir, és diferent cada cop que instal·lem i desinstal·lem el Percona, i canvia si ho fem en una altra màquina. </br></br> ![*_XtraDB](img/18_XtraDB.png) </br>
