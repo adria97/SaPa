@@ -148,15 +148,15 @@ Per canviar la UUID de la nostra màquina, 'auto.cnf'. </br>
 
 ![master permisos slave](img/deleteautoconf.png) </br>
 
-Un cop eliminat el fitxer (amb la base de dades obiament aturada), al iniciar MYSQL es tornara a generar automaticament amb un nou UUID, i podrem observar com ja automaticament els canvis realitzats en el MASTER ja estan en el SLAVE. </br>
+Un cop eliminat el fitxer (amb la base de dades aturada), al iniciar MYSQL es tornarà a generar automàticament amb un nou UUID, i podrem observar com automàticament els canvis realitzats en el MASTER ja són a l'SLAVE. </br>
 
 </br></br></br>
 
 ## GTID
 
-El sistema es similar a la replicació del BinLog. </br>
+El sistema de replicació GTID és similar a la replicació del BinLog. </br>
 
-En el nostre cas com partim de una màquina clonada i amb una replicació, primer tenim eliminar la replicació del MySQL del Slave amb la següent coanda: </br>
+En el nostre cas com partim d'una màquina clonada amb una replicació. Primer hem d'eliminar la replicació de l'slave amb Binlog de MySQL amb la següent comanda: </br>
 
 ![master permisos slave](img/gtid1.png) </br>
 
@@ -164,13 +164,13 @@ Un cop eliminat la relació entre els MySQL, ja podem configurar el fitxer amb l
 
 ![master permisos slave](img/gtid2.png) </br>
 
-En aquest cas no fa falta eliminar el auto.conf per que tenen UUID diferents, així que reiniciem els servei de percona. </br>
+En aquest cas no fa falta eliminar el fitxer auto.conf perquè tenen UUID diferents, per tant, només reiniciem el servei de percona. </br>
 Ara tornarem a enllaçar les màquines per a fer la replicació, pero amb el GTID.
-Per fer-ho tenim que entrar al MySQL i executar la següents línies, la IP del servidor; el usuari remot; la contrasenya del usuari; el port per el que es connectaran; i la Posició. </br>
+Per fer-ho hem d'entrar al MySQL i executar les següents línies: la IP del servidor, l'usuari remot, la contrasenya de l'usuari, el port per el que es connectaran i la posició. </br>
 
 ![master permisos slave](img/gtid3.png) </br>
 
-Un cop fet iniciem el enllaç. </br>
+Un cop fet els passos anteriors, iniciem el enllaç. </br>
 
 ![master permisos slave](img/gtid4.png) </br>
 
