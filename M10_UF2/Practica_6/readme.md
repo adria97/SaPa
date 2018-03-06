@@ -82,73 +82,130 @@ Escriu les sentències SQL per tal d’obtenir els que se’ns demana. A més a 
 
 11. Quina és la mitjana de dies de reserva per l’hotel «HTOP Royal Star» de Blanes durant l’any 2016? (Una reserva pertany el 2016 si alguna nit cau en aquest any). </br>
 
-        SELECT nom, adreca
+        SELECT nom, categoria, adreca,(SELECT max(num_hab)
+                                FROM (SELECT count(hab_id) AS num_hab,hotel_id 
+                                        FROM habitacions GROUP BY hotel_id)max_hab2)AS num_hab
           FROM hotels
-          WHERE categoria = 4;
+        WHERE hotel_id = (SELECT hotel_id 
+          FROM habitacions 
+        GROUP BY hotel_id
+        HAVING count(hab_id)=(SELECT max(num_hab)
+                                        FROM (SELECT count(hab_id) AS num_hab,hotel_id 
+                                                FROM habitacions GROUP BY hotel_id)max_hab));
 
 12. El nom, categoria, adreça i número d’habitacions de l’hotel amb més habitacions de la BD. </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT ho.nom,ho.categoria,ho.adreca,COUNT(ha.hab_id) AS num_habitacions
+          FROM hotels ho
+        INNER JOIN habitacions ha ON ho.hotel_id = ha.hotel_id
+        GROUP BY ho.hotel_id
+        ORDER BY num_habitacions DESC LIMIT 1;
 
 13. Rànquing de 5 països amb més reserves durant l’any 2016. Per cada país mostrar el nom del país i el número de reserves. </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT COUNT(*) AS numReserves, p2.nom
+                FROM reserves r2
+                INNER JOIN clients c2 ON c2.client_id = r2.client_id
+                INNER JOIN paisos p2 ON p2.pais_id = c2.pais_origen_id
+                WHERE  YEAR(r2.data_inici) = 2016
+        GROUP BY p2.pais_id
+        ORDER BY numReserves DESC
+        LIMIT 5;
 
 14. Codi client, Nom, Cognom, del client que ha realitzat més reserves de tota la BD. </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT c.client_id,c.nom,c.cognom1,COUNT(r.reserva_id) AS num_reserves
+          FROM clients c
+        INNER JOIN reserves r ON r.client_id = c.client_id
+        GROUP BY c.client_id 
+        ORDER BY num_reserves DESC LIMIT 1;
 
 15. Codi client, Nom, Cognom, del client que ha realitzat més reserves durant el mes d’agost de l’any 2016. Les reserves a comptabilitzar són totes aquelles que en algun dia del seu període cau en el mes d’agost. </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT  r.client_id AS Client, c.nom, c.cognom1, COUNT(*) AS NumReserves
+          FROM reserves r
+        INNER JOIN clients c ON c.client_id = r.client_id
+        WHERE (r.data_inici <= '2016-08-31' 
+              AND r.data_fi >= '2016-08-1')
+        GROUP BY r.client_id
+        HAVING COUNT(*) = (SELECT MAX(contReserves.NumReserves)
+                             FROM (SELECT COUNT(*) AS NumReserves, r.client_id AS Client, c.nom
+                                     FROM reserves r
+                                   INNER JOIN clients c ON c.client_id = r.client_id
+                                   WHERE (r.data_inici <= '2016-08-31' 
+                                         AND r.data_fi >= '2016-08-1')
+                                   GROUP BY r.client_id) contReserves);
 
 16. Quin és el país que en tenim menys clients? </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT p.nom, COUNT(*) AS num_clients
+          FROM clients c
+          INNER JOIN paisos p ON c.pais_origen_id = p.pais_id
+        GROUP BY p.pais_id
+        ORDER BY num_clients ASC LIMIT 1;
 
 17. Quina és la mitjana de nits dels clients provinents d’‘HOLANDA’ per l’any 2016? </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT AVG(anys.numReserves) AS MitjanaReserves
+          FROM (SELECT COUNT(*) AS numReserves
+                        FROM reserves r2
+                            INNER JOIN clients c2 ON c2.client_id = r2.client_id
+                            INNER JOIN paisos p2 ON p2.pais_id = c2.pais_origen_id
+                            WHERE  p2.nom = 'HOLANDA'
+                            GROUP BY YEAR(r2.data_inici))anys;
 
 18. Digues el nom i cognoms dels clients que el seu cognom sigui ‘Bahi’. </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT nom,cognom1 AS cognoms
+          FROM clients
+        WHERE cognom1="Bahi";
 
 19. Quins clients (nom, cognoms) segueixen el patró de que el seu cognom comenci per la lletra ‘p’  i seguida d’una vocal. </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT nom, cognom1
+            FROM clients
+          WHERE LOWER(cognom1) REGEXP '^p[a,e,i,o,u]';
 
 20. Quin és l’hotel de 4 estrelles amb més reserves durant tot el 2015 ( una reserva pertany el 2015 si alguna de les nits hi pertany). </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT ho2.hotel_id, ho2.nom, ho2.categoria
+          FROM hotels ho2
+        INNER JOIN habitacions h2 on ho2.hotel_id = h2.hotel_id
+        WHERE h2.hab_id = (SELECT hab_id
+                            FROM (SELECT h1.hab_id
+                                    FROM reserves r1
+                                  INNER JOIN habitacions h1 ON r1.hab_id = h1.hab_id
+                                  INNER JOIN hotels ho1 ON h1.hotel_id = ho1.hotel_id
+                                  WHERE (YEAR(r1.data_inici)= 2015 OR YEAR(r1.data_fi)= 2015) AND ho1.categoria=4)hotel4
+                          GROUP BY hab_id
+                          HAVING COUNT(hab_id) = (SELECT MAX(num_res)
+                                                    FROM (SELECT hab_id, count(hab_id) AS num_res
+                                                            FROM (SELECT h1.hab_id
+                                                                    FROM reserves r1
+                                                                  INNER JOIN habitacions h1 ON r1.hab_id = h1.hab_id
+                                                                  INNER JOIN hotels ho1 ON h1.hotel_id = ho1.hotel_id
+                                                                  WHERE (YEAR(r1.data_inici)= 2015 OR YEAR(r1.data_fi)= 2015) AND ho1.categoria=4)hotel4
+                                                  GROUP BY hab_id)reserves));
 
 21. Quin és l’hotel amb més reserves (tota la BD). </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT  h.hotel_id, ho.nom, ho.categoria
+          FROM habitacions h 
+        INNER JOIN hotels ho ON ho.hotel_id = h.hotel_id
+          WHERE hab_id = (SELECT hab_id
+            FROM reserves
+          GROUP BY hab_id
+          HAVING COUNT(hab_id)=(SELECT MAX(num_hab)
+              FROM(SELECT hab_id, COUNT(hab_id) AS num_hab
+                    FROM reserves
+                   GROUP BY hab_id)max_reserves));
 
 22. Quin és el país amb més reserves? (tots els anys) O sigui, quin és el país d’on han vingut més turistes. </br>
 
-        SELECT nom, adreca
-          FROM hotels
-          WHERE categoria = 4;
+        SELECT p.nom,COUNT(*) AS num_reserves
+          FROM paisos p
+          INNER JOIN clients c ON c.pais_origen_id = p.pais_id
+          INNER JOIN reserves r ON r.client_id = c.client_id
+        GROUP BY p.pais_id
+        ORDER BY num_reserves DESC LIMIT 1;
 
