@@ -11,6 +11,9 @@ Escriu les sentències SQL per tal d’obtenir els que se’ns demana. A més a 
           FROM hotels
           WHERE categoria = 4;
 
+Explains sense índex: </br> ![*_In1](IMG/Exp_1.png) </br></br>
+
+
 2. Obtenir el nom dels clients (Nom i cognom) que el seu cognom comenci per vocal (sense tenir en compte els accents). </br>
 
         SELECT nom, cognom1
