@@ -313,5 +313,9 @@ Explains amb índex: </br> ![*_EI22](IMG/EI_22.png) </br></br>
 
 <b>Països:</b> Passa el mateix que a la taula poblacions, no és necessari crear-hi cap índex, però és encara més clar. Aproximadament hi ha uns 200 països al món, i difícilment creixerà la llista. Una taula amb 200 registres i únicament dos camps, no té gairebé impacte en quant al rendment. </br>
 
-<b>Habitacions:</b> No és necessari, ja que normalment quan busquem habitacions, les busquem a través del camp hotel_id i normalent des d'un INNER JOIN, per tant, ja ve filtrat.
+<b>Habitacions:</b> No és necessari, ja que normalment quan busquem habitacions, les busquem a través del camp hotel_id i normalent des d'un INNER JOIN, per tant, ja ve filtrat. </br></br></br>
+
+## Part 2. Query Cache
+
+</br>
 
