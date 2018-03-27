@@ -279,6 +279,12 @@ Explains sense índex: </br> ![*_Exp22](IMG/Exp_22.png) </br></br>
 
 </br>
 
+<b>Hotels:</b> En aquest cas, hem decidit que estaria bé classificar els hotels per dos camps generals: població i categoria. Considerem que el primer és un que ens permet acotar/indexar molt els camps, i la segona és també molt eficaç en aquest aspecte. El primer, al ser més genèric, és millor. </br></br> ![*_Index Hotels](IMG/Ind_01.png) </br>
+
+<b>Clients:</b> En aquesta BD en concret, el nom és el camp que més es busca i repeteix, per tant, hem decidit que aquest sigui l'índex juntament amb el cognom i la data de naixement. </br></br> ![*_Index Clients](IMG/Ind_02.png) </br>
+
+<b>Reserves:</b> Aquí ens hem trobat que la majoria de consultes es fan segons el rang d'inici/fi de la reserva per tant, que aquests camps siguin l'índex d'aquesta taula, seria el cas més ideal. </br></br> ![*_Index Clients](IMG/Ind_05.png) </br>
+
 <b>Població:</b> No hem vist necessari crear-hi cap índex, ja que aquesta taula de té molts pocs registres. Si en tinguéssim més, com a molt podríem utilitzar un índex per la clau primària. També tindria sentit posar-hi un índex en cas que hi hagués moltes poblacions i de varis països, ja que podríem indexar pais_id i poblacio_id. </br>
 
 <b>Països:</b> Passa el mateix que a la taula poblacions, no és necessari crear-hi cap índex, però és encara més clar. Aproximadament hi ha uns 200 països al món, i difícilment creixerà la llista. Una taula amb 200 registres i únicament dos camps, no té gairebé impacte en quant al rendment. </br>
