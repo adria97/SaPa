@@ -13,6 +13,8 @@ Escriu les sentències SQL per tal d’obtenir els que se’ns demana. A més a 
 
 Explains sense índex: </br> ![*_Exp1](IMG/Exp_1.png) </br></br>
 
+Explains amb índex: </br> ![*_EI1](IMG/EI_01.png) </br></br>
+
 
 2. Obtenir el nom dels clients (Nom i cognom) que el seu cognom comenci per vocal (sense tenir en compte els accents). </br>
 
@@ -21,6 +23,8 @@ Explains sense índex: </br> ![*_Exp1](IMG/Exp_1.png) </br></br>
           WHERE cognom1 RLIKE "^[aeiou]";
 
 Explains sense índex: </br> ![*_Exp2](IMG/Exp_2.png) </br></br>
+
+Explains amb índex: </br> ![*_EI2](IMG/EI_02.png) </br></br>
 
 
 3. Quina és la reserva_id que té més nits. Indica també la quantitat de nits. </br>
@@ -32,6 +36,7 @@ Explains sense índex: </br> ![*_Exp2](IMG/Exp_2.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp3](IMG/Exp_3.png) </br></br>
 
+Explains amb índex: </br> ![*_EI3](IMG/EI_03.png) </br></br>
 
 4. Quantes reserves va rebre l’hotel ‘Catalonia Ramblas’ de Barcelona durant tot  l’any 2015 (una reserva pertany al 2015 si alguna nit d’aquesta reserva era del 2015). </br>
 
@@ -43,7 +48,7 @@ Explains sense índex: </br> ![*_Exp3](IMG/Exp_3.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp4.2](IMG/Exp_4.2.png) </br></br>
 
-
+Explains amb índex: </br> ![*_EI4](IMG/EI_04.png) </br></br>
 5. Obtenir el nom i cognoms dels clients que varen néixer el mes de Març. </br>
 
         SELECT nom, cognom1, data_naix
@@ -52,6 +57,7 @@ Explains sense índex: </br> ![*_Exp4.2](IMG/Exp_4.2.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp5](IMG/Exp_5.png) </br></br>
 
+Explains amb índex: </br> ![*_EI5](IMG/EI_05.png) </br></br>
 
 6. Quantitat d’hotels de 4 estrelles de la població de Barcelona. </br>
 
@@ -63,6 +69,7 @@ Explains sense índex: </br> ![*_Exp5](IMG/Exp_5.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp6](IMG/Exp_6.png) </br></br>
 
+Explains amb índex: </br> ![*_EI6](IMG/EI_06.png) </br></br>
 
 7. De l’any 2015 volem obtenir els seu histograma de reserves. És a dir volem saber el número de reserves de cadascun dels mesos. Una reserva pertany a un mes si la alguna nit d’aquella reserva cau a dins de l’any 2015. </br>
 
@@ -75,6 +82,7 @@ Explains sense índex: </br> ![*_Exp6](IMG/Exp_6.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp7](IMG/Exp_7.png) </br></br>
 
+Explains amb índex: </br> ![*_EI7](IMG/EI_07.png) </br></br>
 
 8. El nom dels hotels que tenen com a mínim una habitació lliure durant les dates ‘2015-05-01’ i ‘2015-05-17’. </br>
 
@@ -87,6 +95,7 @@ Explains sense índex: </br> ![*_Exp7](IMG/Exp_7.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp8](IMG/Exp_8.png) </br></br>
 
+Explains amb índex: </br> ![*_EI8](IMG/EI_08.png) </br></br>
 
 9. Obtenir la quantitat de reserves que s’inicien en cadascun dels dies de la setmana. Tenint en compte només l’any 2016. </br>
 
@@ -99,6 +108,7 @@ Explains sense índex: </br> ![*_Exp8](IMG/Exp_8.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp9](IMG/Exp_9.png) </br></br>
 
+Explains amb índex: </br> ![*_EI9](IMG/EI_09.png) </br></br>
 
 10. Durant 2014 qui va realitzar més reserves? Els homes o les dones? Mostra el sexe i el número de reserves. </br>
 
@@ -109,6 +119,7 @@ Explains sense índex: </br> ![*_Exp9](IMG/Exp_9.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp10](IMG/Exp_10.png) </br></br>
 
+Explains amb índex: </br> ![*_EI10](IMG/EI_10.png) </br></br>
 
 11. Quina és la mitjana de dies de reserva per l’hotel «HTOP Royal Star» de Blanes durant l’any 2016? (Una reserva pertany el 2016 si alguna nit cau en aquest any). </br>
 
@@ -125,6 +136,7 @@ Explains sense índex: </br> ![*_Exp10](IMG/Exp_10.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp11](IMG/Exp_11.png) </br></br>
 
+Explains amb índex: </br> ![*_EI11](IMG/EI_11.png) </br></br>
 
 12. El nom, categoria, adreça i número d’habitacions de l’hotel amb més habitacions de la BD. </br>
 
@@ -136,6 +148,7 @@ Explains sense índex: </br> ![*_Exp11](IMG/Exp_11.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp12](IMG/Exp_12.png) </br></br>
 
+Explains amb índex: </br> ![*_EI12](IMG/EI_12.png) </br></br>
 
 13. Rànquing de 5 països amb més reserves durant l’any 2016. Per cada país mostrar el nom del país i el número de reserves. </br>
 
@@ -150,6 +163,7 @@ Explains sense índex: </br> ![*_Exp12](IMG/Exp_12.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp13](IMG/Exp_13.png) </br></br>
 
+Explains amb índex: </br> ![*_EI13](IMG/EI_13.png) </br></br>
 
 14. Codi client, Nom, Cognom, del client que ha realitzat més reserves de tota la BD. </br>
 
@@ -161,6 +175,7 @@ Explains sense índex: </br> ![*_Exp13](IMG/Exp_13.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp14](IMG/Exp_14.png) </br></br>
 
+Explains amb índex: </br> ![*_EI14](IMG/EI_14.png) </br></br>
 
 15. Codi client, Nom, Cognom, del client que ha realitzat més reserves durant el mes d’agost de l’any 2016. Les reserves a comptabilitzar són totes aquelles que en algun dia del seu període cau en el mes d’agost. </br>
 
@@ -180,6 +195,7 @@ Explains sense índex: </br> ![*_Exp14](IMG/Exp_14.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp15](IMG/Exp_15.png) </br></br>
 
+Explains amb índex: </br> ![*_EI15](IMG/EI_15.png) </br></br>
 
 16. Quin és el país que en tenim menys clients? </br>
 
@@ -191,6 +207,7 @@ Explains sense índex: </br> ![*_Exp15](IMG/Exp_15.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp16](IMG/Exp_16.png) </br></br>
 
+Explains amb índex: </br> ![*_EI16](IMG/EI_16.png) </br></br>
 
 17. Quina és la mitjana de nits dels clients provinents d’‘HOLANDA’ per l’any 2016? </br>
 
@@ -204,6 +221,7 @@ Explains sense índex: </br> ![*_Exp16](IMG/Exp_16.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp17](IMG/Exp_17.png) </br></br>
 
+Explains amb índex: </br> ![*_EI17](IMG/EI_17.png) </br></br>
 
 18. Digues el nom i cognoms dels clients que el seu cognom sigui ‘Bahi’. </br>
 
@@ -213,6 +231,7 @@ Explains sense índex: </br> ![*_Exp17](IMG/Exp_17.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp18](IMG/Exp_18.png) </br></br>
 
+Explains amb índex: </br> ![*_EI18](IMG/EI_18.png) </br></br>
 
 19. Quins clients (nom, cognoms) segueixen el patró de que el seu cognom comenci per la lletra ‘p’  i seguida d’una vocal. </br>
 
@@ -222,6 +241,7 @@ Explains sense índex: </br> ![*_Exp18](IMG/Exp_18.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp19](IMG/Exp_19.png) </br></br>
 
+Explains amb índex: </br> ![*_EI19](IMG/EI_19.png) </br></br>
 
 20. Quin és l’hotel de 4 estrelles amb més reserves durant tot el 2015 ( una reserva pertany el 2015 si alguna de les nits hi pertany). </br>
 
@@ -246,6 +266,7 @@ Explains sense índex: </br> ![*_Exp19](IMG/Exp_19.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp20](IMG/Exp_20.png) </br></br>
 
+Explains amb índex: </br> ![*_EI20](IMG/EI_20.png) </br></br>
 
 21. Quin és l’hotel amb més reserves (tota la BD). </br>
 
@@ -262,6 +283,7 @@ Explains sense índex: </br> ![*_Exp20](IMG/Exp_20.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp21](IMG/Exp_21.png) </br></br>
 
+Explains amb índex: </br> ![*_EI21](IMG/EI_21.png) </br></br>
 
 22. Quin és el país amb més reserves? (tots els anys) O sigui, quin és el país d’on han vingut més turistes. </br>
 
@@ -274,6 +296,7 @@ Explains sense índex: </br> ![*_Exp21](IMG/Exp_21.png) </br></br>
 
 Explains sense índex: </br> ![*_Exp22](IMG/Exp_22.png) </br></br>
 
+Explains amb índex: </br> ![*_EI22](IMG/EI_22.png) </br></br>
 
 ### Explicació dels índex per taules
 
