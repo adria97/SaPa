@@ -275,3 +275,13 @@ Explains sense índex: </br> ![*_Exp21](IMG/Exp_21.png) </br></br>
 Explains sense índex: </br> ![*_Exp22](IMG/Exp_22.png) </br></br>
 
 
+### Explicació dels índex per taules
+
+</br>
+
+<b>Població:</b> No hem vist necessari crear-hi cap índex, ja que aquesta taula de té molts pocs registres. Si en tinguéssim més, com a molt podríem utilitzar un índex per la clau primària. També tindria sentit posar-hi un índex en cas que hi hagués moltes poblacions i de varis països, ja que podríem indexar pais_id i poblacio_id. </br>
+
+<b>Països:</b> Passa el mateix que a la taula poblacions, no és necessari crear-hi cap índex, però és encara més clar. Aproximadament hi ha uns 200 països al món, i difícilment creixerà la llista. Una taula amb 200 registres i únicament dos camps, no té gairebé impacte en quant al rendment. </br>
+
+<b>Habitacions:</b> No és necessari, ja que normalment quan busquem habitacions, les busquem a través del camp hotel_id i normalent des d'un INNER JOIN, per tant, ja ve filtrat.
+
