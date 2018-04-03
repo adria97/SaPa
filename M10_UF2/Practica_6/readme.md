@@ -322,18 +322,43 @@ Escull 5 sentències SQL de la Part 1 (intenta que els temps d’execució sigui
 1. Quins temps d'execució t'han sortit per cada consulta?
 
 - Consulta 9 => (0.3-0.4)
+
+![*_Consulta9_QCOFF](IMG2/Query_OFF/QOf_01.png)
+
 - Consulta 13 => (0.4)
+
+![*_Consulta9_QCOFF](IMG2/Query_OFF/QOf_02.png)
+
 - Consulta 15 => (0.5)
+
+![*_Consulta9_QCOFF](IMG2/Query_OFF/QOf_03.png)
+
 - Consulta 20 => (0.8-0.9)
+
+![*_Consulta9_QCOFF](IMG2/Query_OFF/QOf_04.png)
+
 - Consulta 21 => (0.4)
+
+![*_Consulta9_QCOFF](IMG2/Query_OFF/QOf_05.png)
 
 2. Activa la Query Cache (ON). Reexecuta les consultes anteriors 2 vegades seguides. Ha millorat el temps d'execució? Sí, ha millorat en tots els casos.
 
 - Consulta 9 => (0.0)
+
+![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_01.png)
+
 - Consulta 13 => (0.0)
+
+![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_02.png)
+
 - Consulta 15 => (0.0)
+
+![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_03.png)
+
 - Consulta 20 => (0.0)
+
+![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_04.png)
+
 - Consulta 21 => (0.0)
 
-
-
+![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_05.png)
