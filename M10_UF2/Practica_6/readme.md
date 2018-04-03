@@ -327,38 +327,64 @@ Escull 5 sentències SQL de la Part 1 (intenta que els temps d’execució sigui
 
 - Consulta 13 => (0.4)
 
-![*_Consulta9_QCOFF](IMG2/Query_OFF/QOf_05.png)
+![*_Consulta13_QCOFF](IMG2/Query_OFF/QOf_05.png)
 
 - Consulta 15 => (0.5)
 
-![*_Consulta9_QCOFF](IMG2/Query_OFF/QOf_03.png)
+![*_Consulta15 QCOFF](IMG2/Query_OFF/QOf_03.png)
 
 - Consulta 20 => (0.8-0.9)
 
-![*_Consulta9_QCOFF](IMG2/Query_OFF/QOf_01.png)
+![*_Consulta20_QCOFF](IMG2/Query_OFF/QOf_01.png)
 
 - Consulta 21 => (0.4)
 
-![*_Consulta9_QCOFF](IMG2/Query_OFF/QOf_02.png)
+![*_Consulta21_QCOFF](IMG2/Query_OFF/QOf_02.png)
 
 2. Activa la Query Cache (ON). Reexecuta les consultes anteriors 2 vegades seguides. Ha millorat el temps d'execució? Sí, ha millorat en tots els casos.
 
+Primer activem la Query Cache.
+
+![*_QCache_ON](IMG2/Query.png)
+
 - Consulta 9 => (0.0)
 
-![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_04.png)
+![*_Consulta9_QCON](IMG2/Query_ON/QOn_04.png)
 
 - Consulta 13 => (0.0)
 
-![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_05.png)
+![*_Consulta13_QCON](IMG2/Query_ON/QOn_05.png)
 
 - Consulta 15 => (0.0)
 
-![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_03.png)
+![*_Consulta15_QCON](IMG2/Query_ON/QOn_03.png)
 
 - Consulta 20 => (0.0)
 
-![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_01.png)
+![*_Consulta20_QCON](IMG2/Query_ON/QOn_01.png)
 
 - Consulta 21 => (0.0)
 
-![*_Consulta9_QCOFF](IMG2/Query_ON/QOn_02.png)
+![*_Consulta21_QCON](IMG2/Query_ON/QOn_02.png)
+
+3. Quina modificació hem de fer perquè la consulta no passi per Cache? (reescriu una consulta amb els canvis).
+
+Hauríem d'util·litzar aquesta comanda: <b>SELECT SQL_NO_CACHE</b>.
+
+![*_QCache_OFF](IMG2/SQL_NO_CACHE.png)
+
+4. Activa la Query Cache (ON DEMAND). Posa un exemple d'execució sota demanda. Quina modificació hem de fer perquè la consulta passi per Cache?(reescriu la consulta amb els canvis).
+
+Com a exemple posarem la comanda número 20, ja que és la que triga més temps en executar-se. Haurem d'utilitzar la següent comanda perquè passi per Cache: <b>SELECT SQL_CACHE</b>.
+
+![*_QCache_ON](IMG2/SQL_CACHE.png)
+
+- Un cop acabats els punts anteriors mostra quin ha estat el teu CacheHitRatio? Com has obtingut els valors de cache_hits i cache_misses?
+
+Primer haurem d'obtenir el valor a través d'aquestes dues comandes. 
+
+![*_QCache_ON](IMG2/HITS_COM.png)
+
+A continuació utilitzarem la fórmula <i>Cache Hit Ratio = (cache_hits/cache_hits + cache_misses) * 100<i> Per calcular-lo. Aquesta és la resposta.
+        
+![*_QCache_ON](IMG2/HITS_COM_CALC.png)
