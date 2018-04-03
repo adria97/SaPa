@@ -317,5 +317,23 @@ Explains amb índex: </br> ![*_EI22](IMG/EI_22.png) </br></br>
 
 ## Part 2. Query Cache
 
-</br>
+Escull 5 sentències SQL de la Part 1 (intenta que els temps d’execució siguin significatius).
+
+1. Quins temps d'execució t'han sortit per cada consulta?
+
+- Consulta 9 => (0.3-0.4)
+- Consulta 13 => (0.4)
+- Consulta 15 => (0.5)
+- Consulta 20 => (0.8-0.9)
+- Consulta 21 => (0.4)
+
+2. Activa la Query Cache (ON). Reexecuta les consultes anteriors 2 vegades seguides. Ha millorat el temps d'execució? Sí, ha millorat en tots els casos.
+
+- Consulta 9 => (0.0)
+- Consulta 13 => (0.0)
+- Consulta 15 => (0.0)
+- Consulta 20 => (0.0)
+- Consulta 21 => (0.0)
+
+
 
