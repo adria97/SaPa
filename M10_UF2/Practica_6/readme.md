@@ -383,8 +383,8 @@ Com a exemple posarem la comanda número 20, ja que és la que triga més temps 
 
 Primer haurem d'obtenir el valor a través d'aquestes dues comandes. 
 
-![*_QCache_ON](IMG2/HITS_COM.png)
+![*_Hits COM](IMG2/HITS_COM.png)
 
 A continuació utilitzarem la fórmula <i>Cache Hit Ratio = (cache_hits/cache_hits + cache_misses) * 100<i> Per calcular-lo. Aquesta és la resposta.
         
-![*_QCache_ON](IMG2/HITS_COM_CALC.png)
+![*_Hits COM Calculat](IMG2/HITS_COM_calc.png)
